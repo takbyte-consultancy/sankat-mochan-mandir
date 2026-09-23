@@ -99,6 +99,8 @@ If Hostinger's **Node.js Web App / Deploy from GitHub** screen asks for a `packa
 
 - `npm run build` copies `index.html`, `robots.txt`, `.htaccess` and `assets/` into `dist/`.
 - `npm start` runs `server.js`, a small static server with no dependencies. It serves `dist/` on the port Hostinger gives it (`PORT`).
+- `server.js` and `scripts/build.js` are CommonJS on purpose: Hostinger starts the entry file with `require()`, which cannot load an ES module on Node 18. Do not add `"type": "module"` to package.json.
+- In Hostinger's settings, set **Entry file** to `server.js` and leave **Output directory** empty.
 - If the screen only asks for a build command and an output directory, it is serving static files, and `server.js` is not used.
 - Local preview: `npm run dev`, then open http://localhost:3000.
 
