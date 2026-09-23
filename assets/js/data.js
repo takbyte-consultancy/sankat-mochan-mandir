@@ -1,104 +1,154 @@
 /* =====================================================================
    Sankat Mochan Mandir, Mirzapur — editable site content
    ---------------------------------------------------------------------
-   Edit this file to change timings, sevaks, events and gallery.
-   No HTML changes needed. Keep the commas and quotes as they are.
-   Every value marked [REPLACE] is a placeholder — replace it with
-   real information before going live.
+   Edit this file to change timings, sevaks, events, gallery, donation
+   and contact details. No HTML changes needed.
+   Keep the commas and quotes as they are.
+
+   Anything marked [REPLACE] is a placeholder or a SAMPLE value —
+   confirm it with the temple before going live.
    ===================================================================== */
 
 window.SITE_DATA = {
 
-  /* ---------- Darshan & Aarti timings ---------- */
-  // Shown in the strip under the hero AND in the Visitor Info table.
-  timings: [
-    { label: "Morning Darshan",   labelHi: "प्रातः दर्शन",   time: "[REPLACE] 5:00 AM – 12:00 PM" },
-    { label: "Afternoon Darshan", labelHi: "मध्याह्न दर्शन", time: "[REPLACE] 3:00 PM – 6:00 PM" },
-    { label: "Evening Darshan",   labelHi: "सायं दर्शन",     time: "[REPLACE] 6:00 PM – 10:00 PM" }
-  ],
+  /* ---------- Hero announcement card ---------- */
+  announcement: {
+    title: "विशेष सूचना",
+    titleEn: "Darshan Announcement",
+    // [REPLACE] sample text — write the temple's current announcement
+    text: "प्रत्येक मंगलवार एवं शनिवार को विशेष सुंदरकांड पाठ एवं महाआरती होती है। अनुष्ठान एवं चोला अर्पण हेतु पूर्व पंजीकरण कराएं।"
+  },
 
+  /* ---------- Daily schedule ----------
+     start / end use 24-hour "HH:MM" (India time). They drive:
+       • the "Darshan Open / Closed" badge in the top bar
+       • the schedule table in Visitor Info
+     closed: true  → the temple is closed during this slot
+     highlight: true → shown in saffron (e.g. the main aarti)
+     [REPLACE] ALL TIMES BELOW ARE SAMPLES — confirm with the temple. */
+  schedule: [
+    { ritual: "कपाट उद्घाटन व मंगला आरती", ritualEn: "Doors open · Mangla Aarti", start: "05:00", end: "05:30", note: "निर्मल दर्शन" },
+    { ritual: "प्रातः दर्शन व हनुमान चालीसा", ritualEn: "Morning darshan",           start: "05:30", end: "12:00", note: "सामान्य दर्शन" },
+    { ritual: "भोग आरती व विश्राम",          ritualEn: "Bhog Aarti · Rest",          start: "12:00", end: "16:00", note: "कपाट बंद", closed: true },
+    { ritual: "सायं दर्शन",                  ritualEn: "Evening darshan",           start: "16:00", end: "19:30", note: "श्रृंगार दर्शन" },
+    { ritual: "संध्या महाआरती",               ritualEn: "Sandhya Maha Aarti",        start: "19:30", end: "20:15", note: "शंख-घंट नाद सहित", highlight: true },
+    { ritual: "दर्शन",                        ritualEn: "Darshan",                   start: "20:15", end: "21:30", note: "" },
+    { ritual: "शयन आरती व कपाट बंद",          ritualEn: "Shayan Aarti · Doors close", start: "21:30", end: "22:00", note: "रात्रि विश्राम" }
+  ],
+  scheduleNote: "मंगलवार, शनिवार एवं विशेष पर्वों पर समय में परिवर्तन हो सकता है। विशेष दर्शन से पहले व्हाट्सएप पर पुष्टि करें।",
+
+  /* Aarti tiles in the hero ("time" is 24-hour HH:MM). [REPLACE] sample times */
   aartis: [
-    { label: "Mangla Aarti",  labelHi: "मंगला आरती",  time: "[REPLACE] 5:00 AM" },
-    { label: "Bhog Aarti",    labelHi: "भोग आरती",    time: "[REPLACE] 12:00 PM" },
-    { label: "Sandhya Aarti", labelHi: "संध्या आरती", time: "[REPLACE] 7:00 PM" },
-    { label: "Shayan Aarti",  labelHi: "शयन आरती",   time: "[REPLACE] 10:00 PM" }
+    { label: "मंगला आरती",   labelEn: "Mangla",  time: "05:30" },
+    { label: "भोग आरती",     labelEn: "Bhog",    time: "12:00" },
+    { label: "संध्या महाआरती", labelEn: "Sandhya", time: "19:30" },
+    { label: "शयन आरती",    labelEn: "Shayan",  time: "21:30" }
   ],
 
   /* ---------- Temple family ---------- */
   mahant: {
     name: "Shree Yogendra Nath Tiwari",
+    nameHi: "श्री योगेंद्र नाथ तिवारी",
     title: "Mahant",
     titleHi: "महंत",
     photo: "assets/images/mahant.jpg",
-    note: "[REPLACE] A short line about the Mahant ji's seva at the temple."
+    // [REPLACE] sample text
+    note: "पूज्य महंत जी के सानिध्य में मंदिर की पूजा परंपरा, नित्य अनुष्ठान एवं सेवा कार्य संपन्न होते हैं।"
   },
 
+  // role: shown as a small tag. Change "सेवक" to each person's actual seva if you wish.
   sevaks: [
-    { name: "Pt. Vibhav Kumar Upadhyay", photo: "assets/images/sevak-1.jpg" },
-    { name: "Pt. Ankit Tiwari",          photo: "assets/images/sevak-2.jpg" },
-    { name: "Pt. Arpit Tiwari",          photo: "assets/images/sevak-3.jpg" },
-    { name: "Pt. Anubhav Upadhyay",      photo: "assets/images/sevak-4.jpg" }
+    { name: "Pt. Vibhav Kumar Upadhyay", nameHi: "पं. विभव कुमार उपाध्याय", role: "सेवक", photo: "assets/images/sevak-1.jpg" },
+    { name: "Pt. Ankit Tiwari",          nameHi: "पं. अंकित तिवारी",         role: "सेवक", photo: "assets/images/sevak-2.jpg" },
+    { name: "Pt. Arpit Tiwari",          nameHi: "पं. अर्पित तिवारी",         role: "सेवक", photo: "assets/images/sevak-3.jpg" },
+    { name: "Pt. Anubhav Upadhyay",      nameHi: "पं. अनुभव उपाध्याय",       role: "सेवक", photo: "assets/images/sevak-4.jpg" }
   ],
 
-  /* ---------- Upcoming events ----------
-     date: "YYYY-MM-DD" (used for the gold date seal)
-     Past events are hidden automatically. Set showPast: true to keep them. */
+  /* ---------- Events ----------
+     One-off event:  date: "YYYY-MM-DD"  (gold seal shows the date; hidden after it passes)
+     Recurring:      recurring: "प्रत्येक मंगलवार व शनिवार"  (always shown)
+     badge: short tag in the corner (e.g. वार्षिक / साप्ताहिक)
+     image is optional. */
   showPastEvents: false,
   events: [
     {
-      title: "Hanuman Jayanti",
-      titleHi: "हनुमान जयंती",
-      date: "2027-04-21",            // [REPLACE] confirm date
+      title: "Hanuman Jayanti Mahotsav", titleHi: "श्री हनुमान जयंती महोत्सव",
+      tithi: "चैत्र पूर्णिमा", badge: "वार्षिक",
+      date: "2027-04-21",                         // [REPLACE] confirm date
+      location: "मुख्य मंदिर",
       image: "assets/images/event-1.jpg",
-      description: "[REPLACE] Special shringar, Sundarkand path and bhandara on Hanuman Jayanti."
+      description: "[REPLACE] विशेष श्रृंगार, सुंदरकांड पाठ, महाआरती एवं भंडारा।"
     },
     {
-      title: "Ram Navami",
-      titleHi: "राम नवमी",
-      date: "2027-04-15",            // [REPLACE] confirm date
+      title: "Shri Ram Navami", titleHi: "श्री राम नवमी महोत्सव",
+      tithi: "चैत्र शुक्ल नवमी", badge: "वार्षिक",
+      date: "2027-04-15",                         // [REPLACE] confirm date
+      location: "मुख्य मंदिर",
       image: "assets/images/event-2.jpg",
-      description: "[REPLACE] Celebrations of Shri Ram's birth with bhajan, kirtan and aarti."
+      description: "[REPLACE] प्रभु श्री राम का प्राकट्योत्सव, रामचरितमानस पाठ एवं प्रसाद वितरण।"
     },
     {
-      title: "Sundarkand Path",
-      titleHi: "सुंदरकांड पाठ",
-      date: "2026-10-06",            // [REPLACE] confirm date
+      title: "Sundarkand Path", titleHi: "सुंदरकांड पाठ",
+      tithi: "साप्ताहिक", badge: "साप्ताहिक",
+      recurring: "प्रत्येक मंगलवार व शनिवार",       // [REPLACE] confirm day/time
+      location: "[REPLACE] समय: सायं 05:00 बजे",
       image: "assets/images/event-3.jpg",
-      description: "[REPLACE] Collective Sundarkand path. All devotees are welcome to join."
+      description: "[REPLACE] भक्तों द्वारा संगीतमय सुंदरकांड पाठ एवं आरती। सभी श्रद्धालु आमंत्रित हैं।"
     }
   ],
 
   /* ---------- Gallery ----------
-     category must be one of: shringar, festivals, temple, events */
+     category must be one of: shringar, aarti, parisar, utsav */
   gallery: [
-    { src: "assets/images/gallery-1.jpg", category: "shringar",  caption: "[REPLACE] Deity shringar" },
-    { src: "assets/images/gallery-2.jpg", category: "temple",    caption: "[REPLACE] Temple entrance" },
-    { src: "assets/images/gallery-3.jpg", category: "festivals", caption: "[REPLACE] Hanuman Jayanti" },
-    { src: "assets/images/gallery-4.jpg", category: "events",    caption: "[REPLACE] Sundarkand path" },
-    { src: "assets/images/gallery-5.jpg", category: "shringar",  caption: "[REPLACE] Tuesday shringar" },
-    { src: "assets/images/gallery-6.jpg", category: "temple",    caption: "[REPLACE] Garbhagriha" },
-    { src: "assets/images/gallery-7.jpg", category: "festivals", caption: "[REPLACE] Diwali deepotsav" },
-    { src: "assets/images/gallery-8.jpg", category: "events",    caption: "[REPLACE] Bhandara" },
-    { src: "assets/images/gallery-9.jpg", category: "temple",    caption: "[REPLACE] Evening aarti" }
+    { src: "assets/images/gallery-1.jpg", category: "shringar", tag: "श्रृंगार", caption: "[REPLACE] मंगलवार श्रृंगार दर्शन" },
+    { src: "assets/images/gallery-2.jpg", category: "parisar",  tag: "परिसर",   caption: "[REPLACE] मंदिर प्रवेश द्वार" },
+    { src: "assets/images/gallery-3.jpg", category: "aarti",    tag: "आरती",    caption: "[REPLACE] संध्या महाआरती" },
+    { src: "assets/images/gallery-4.jpg", category: "utsav",    tag: "उत्सव",   caption: "[REPLACE] हनुमान जयंती" },
+    { src: "assets/images/gallery-5.jpg", category: "shringar", tag: "श्रृंगार", caption: "[REPLACE] सिंदूर चोला श्रृंगार" },
+    { src: "assets/images/gallery-6.jpg", category: "parisar",  tag: "परिसर",   caption: "[REPLACE] गर्भगृह" },
+    { src: "assets/images/gallery-7.jpg", category: "utsav",    tag: "उत्सव",   caption: "[REPLACE] दीपोत्सव" },
+    { src: "assets/images/gallery-8.jpg", category: "aarti",    tag: "आरती",    caption: "[REPLACE] अखंड दीप" },
+    { src: "assets/images/gallery-9.jpg", category: "utsav",    tag: "उत्सव",   caption: "[REPLACE] भंडारा" }
   ],
 
   /* ---------- Donations ---------- */
   donation: {
     upiId: "[REPLACE]-upi-id@bank",
     qrImage: "assets/images/donation-qr.png",
-    amounts: [101, 251, 501, 1100],
-    purposes: ["General Seva", "Bhog/Prasad", "Festival", "Temple Development"]
+    amounts: [101, 251, 501, 1100, 2100, 5100],
+    defaultAmount: 501,
+    purposes: [
+      "सामान्य सेवा (General Seva)",
+      "दैनिक भोग व प्रसाद (Bhog/Prasad)",
+      "अखंड दीप सेवा (Akhand Deep)",
+      "मंगलवार चोला सेवा (Chola Seva)",
+      "भंडारा व अन्नदान (Bhandara)",
+      "उत्सव सेवा (Festival)",
+      "मंदिर विकास (Temple Development)"
+    ]
+  },
+
+  /* ---------- Trust ---------- */
+  trust: {
+    name: "संकट मोचन सेवा संस्थान",
+    nameEn: "Sankat Mochan Seva Sansthan",
+    // [REPLACE] describe the Sansthan
+    description: "[REPLACE] मंदिर का प्रबंधन एवं सेवा कार्य संकट मोचन सेवा संस्थान द्वारा संचालित किए जाते हैं। संस्थान के कार्यों का संक्षिप्त विवरण यहाँ लिखें।",
+    activities: ["[REPLACE] अन्नक्षेत्र", "[REPLACE] उत्सव आयोजन", "[REPLACE] श्रद्धालु सेवा"],
+    url: "https://SANSTHAN-URL-HERE",          // [REPLACE]
+    registrationNo: ""                         // e.g. "Reg. No. ..." — leave "" to hide
   },
 
   /* ---------- Contact ---------- */
   contact: {
-    address: "[REPLACE] Full temple address, Mirzapur, Uttar Pradesh – [PIN]",
-    phoneDisplay: "[REPLACE] +91 XXXXX XXXXX",
-    email: "[REPLACE]-email@example.com",
+    addressLines: ["[REPLACE] श्री संकट मोचन हनुमान मंदिर", "[REPLACE] मार्ग / मोहल्ला", "मिर्ज़ापुर, उत्तर प्रदेश – [PIN]"],
+    phones: [
+      { label: "मंदिर कार्यालय", number: "[REPLACE] +91 XXXXX XXXXX" }
+    ],
+    officeHours: "[REPLACE] प्रतिदिन प्रातः 06:00 से रात्रि 09:00",
+    emails: ["[REPLACE]-email@example.com"],
     // Google Maps → Share → Embed a map → copy only the src="..." URL
-    mapEmbed: "https://www.google.com/maps?q=Mirzapur,+Uttar+Pradesh&output=embed"  // [REPLACE]
-  },
-
-  /* ---------- Trust ---------- */
-  sansthanUrl: "https://SANSTHAN-URL-HERE"   // [REPLACE]
+    mapEmbed: "https://www.google.com/maps?q=Mirzapur,+Uttar+Pradesh&output=embed", // [REPLACE]
+    mapLink: "https://maps.google.com/?q=Mirzapur,+Uttar+Pradesh"                    // [REPLACE]
+  }
 };

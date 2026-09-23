@@ -44,31 +44,41 @@ Keep photos under ~250 KB each. <https://squoosh.app> compresses them for free.
 
 ## Everyday updates (only `assets/js/data.js`)
 
-**Change timings**: edit the `time` text in `timings` / `aartis`.
+**Timings**: edit `schedule` (the table) and `aartis` (the hero tiles and footer). Times are 24-hour `"HH:MM"` in India time, for example `"19:30"`. The top bar uses them to show **"मंदिर खुला है / Darshan open"** or **"कपाट बंद / Opens …"** live, marks the current row in the table, and highlights the next aarti. Set `closed: true` on a slot when the doors are shut. Set `highlight: true` to show a slot in saffron.
+⚠️ The times in the file now are **samples**. Replace them with the real schedule before going live.
+
+**Announcement** (the card beside the deity in the hero): edit `announcement.text`. Set it to `""` to hide the card text.
 
 **Add an event**: copy one block inside `events: [ … ]`, paste it below, and change it:
 ```js
 {
-  title: "Sharad Purnima",
-  titleHi: "शरद पूर्णिमा",
-  date: "2026-10-25",                 // YYYY-MM-DD
-  image: "assets/images/event-4.jpg", // upload this image too
+  title: "Sharad Purnima", titleHi: "शरद पूर्णिमा",
+  tithi: "आश्विन पूर्णिमा", badge: "वार्षिक",
+  date: "2026-10-25",                 // one-off event: gold seal shows the date; hides after it passes
+  location: "मुख्य मंदिर",
+  image: "assets/images/event-4.jpg", // optional
   description: "Short description of the event."
 },
 ```
-Past events hide themselves automatically. The gold seal and the WhatsApp message are filled in from the date.
+For a weekly or monthly event, use `recurring: "प्रत्येक मंगलवार"` instead of `date`. Recurring events never hide.
 
 **Add gallery photos**: upload the image to `assets/images/`, then add a line:
 ```js
-{ src: "assets/images/gallery-10.jpg", category: "festivals", caption: "Diwali 2026" },
+{ src: "assets/images/gallery-10.jpg", category: "utsav", tag: "उत्सव", caption: "दीपोत्सव 2026" },
 ```
-`category` must be one of `shringar`, `festivals`, `temple`, `events` (these match the filter buttons).
+`category` must be one of `shringar`, `aarti`, `parisar`, `utsav` (these match the filter buttons). Clicking a photo opens a built-in viewer with swipe, arrow keys and Esc. It needs no extra library.
 
-**Donation amounts / purposes**: edit `donation.amounts` and `donation.purposes`.
+**Sevaks**: each has `nameHi`, `name` and `role` (shown as a small tag).
+
+**Donation**: `amounts`, `defaultAmount`, `purposes`, `upiId`.
+
+**Trust**: `trust.description`, `trust.activities` (the small chips), `trust.url`, and `trust.registrationNo` (leave `""` to hide).
+
+**Contact**: `addressLines`, `phones` (you can add more than one), `officeHours`, `emails`, `mapEmbed`, `mapLink`.
 
 After editing, commit and push to GitHub. Hostinger deploys the change automatically (see below).
 
-> If a returning visitor still sees the old version, change `?v=1` to `?v=2` on the three `assets/...` links at the bottom and top of `index.html`.
+> If a returning visitor still sees the old version, raise the `?v=` number on the `assets/...` links in `index.html` (for example `?v=3` → `?v=4`).
 
 ---
 
@@ -108,7 +118,7 @@ hPanel → **Security → SSL**: install the free SSL for the domain. `.htaccess
 ---
 
 ## Notes
-- Libraries load from CDNs: Google Fonts, GSAP + ScrollTrigger (cdnjs) and GLightbox (jsDelivr). If one fails to load, the site still works, with simpler animations and plain image links.
+- Only Google Fonts and GSAP (cdnjs) load from CDNs. GSAP is optional: without it the site uses its own scroll animations. The gallery viewer, live status and forms need no library.
 - Animations stop for visitors who turn on "reduce motion" in their device settings.
 - Forms need no backend. They open WhatsApp (app on mobile, WhatsApp Web on desktop) with the message pre-filled, and the visitor presses Send.
 

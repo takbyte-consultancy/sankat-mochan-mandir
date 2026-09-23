@@ -3,19 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sankat Mochan Mandir, Mirzapur | श्री संकट मोचन हनुमान मंदिर</title>
-  <meta name="description" content="Official website of Shri Sankat Mochan Hanuman Mandir, Mirzapur, Uttar Pradesh. Darshan and aarti timings, how to reach, upcoming events, gallery and donations (daan).">
+  <title>श्री संकट मोचन हनुमान मंदिर, मिर्ज़ापुर | Sankat Mochan Mandir, Mirzapur</title>
+  <meta name="description" content="Shri Sankat Mochan Hanuman Mandir, Mirzapur, Uttar Pradesh — darshan and aarti timings, how to reach, festivals, gallery and seva/donations.">
   <meta name="theme-color" content="#5E1220">
-  <!-- [REPLACE] your real domain -->
+  <!-- [REPLACE] your real domain in the 5 places below -->
   <link rel="canonical" href="https://www.example.com/">
-
-  <!-- Open Graph / social sharing -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Sankat Mochan Mandir, Mirzapur">
-  <meta property="og:title" content="Sankat Mochan Mandir, Mirzapur | जय श्री राम">
-  <meta property="og:description" content="Darshan timings, events, gallery and donations for Shri Sankat Mochan Hanuman Mandir, Mirzapur.">
-  <meta property="og:image" content="https://www.example.com/assets/images/og-image.jpg"><!-- [REPLACE] domain -->
-  <meta property="og:url" content="https://www.example.com/"><!-- [REPLACE] domain -->
+  <meta property="og:title" content="श्री संकट मोचन हनुमान मंदिर, मिर्ज़ापुर | जय श्री राम">
+  <meta property="og:description" content="Darshan timings, festivals, gallery and seva for Shri Sankat Mochan Hanuman Mandir, Mirzapur.">
+  <meta property="og:image" content="https://www.example.com/assets/images/og-image.jpg">
+  <meta property="og:url" content="https://www.example.com/">
   <meta property="og:locale" content="hi_IN">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -24,12 +22,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Marcellus&family=Mukta:wght@400;500;600&family=Tiro+Devanagari+Hindi&family=Yatra+One&display=swap">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css">
-  <link rel="stylesheet" href="assets/css/style.css?v=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mukta:wght@400;500;600;700&family=Tiro+Devanagari+Hindi&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css?v=3">
   <script>document.documentElement.classList.replace('no-js','js');</script>
 
-  <!-- Structured data for Google. [REPLACE] address / phone / url -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -45,7 +41,7 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Reusable SVG motifs -->
+  <!-- ===== SVG sprite: motifs + icons ===== -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
     <defs>
       <symbol id="mandala" viewBox="-100 -100 200 200">
@@ -69,319 +65,385 @@
         <path d="M3 18h26c-1.2 6-6.4 10-13 10S4.2 24 3 18Z" fill="#D4A437"/>
         <path d="M3 18h26" stroke="#5E1220" stroke-width="1.2"/>
       </symbol>
+      <symbol id="i-bell" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a1.6 1.6 0 0 0-1.6 1.6v.7A6.5 6.5 0 0 0 5.5 10.6V15L3.6 17.2V18h16.8v-.8L18.5 15v-4.4a6.5 6.5 0 0 0-4.9-6.3v-.7A1.6 1.6 0 0 0 12 2Zm0 20a2.6 2.6 0 0 0 2.5-2.2h-5A2.6 2.6 0 0 0 12 22Z"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1Z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm9 7.2L4 7v10h16V7l-8 5.2Z"/></symbol>
+      <symbol id="i-check" viewBox="0 0 20 20"><path fill="currentColor" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.6l7.3-7.3a1 1 0 0 1 1.4 0Z"/></symbol>
+      <symbol id="i-train" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8 2 4 2.5 4 6v9.5A3.5 3.5 0 0 0 7.5 19L6 20.5v.5h2l2-2h4l2 2h2v-.5L16.5 19a3.5 3.5 0 0 0 3.5-3.5V6c0-3.5-4-4-8-4ZM7.5 17a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3ZM11 10H6V6h5v4Zm5.5 7a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm1.5-7h-5V6h5v4Z"/></symbol>
+      <symbol id="i-road" viewBox="0 0 24 24"><path fill="currentColor" d="M18.9 6a1.5 1.5 0 0 0-1.4-1h-11a1.5 1.5 0 0 0-1.4 1L3 12v8a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-8l-2.1-6ZM6.5 16a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm11 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3ZM5 11l1.5-4.5h11L19 11H5Z"/></symbol>
+      <symbol id="i-plane" viewBox="0 0 24 24"><path fill="currentColor" d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5Z"/></symbol>
+      <symbol id="i-scroll" viewBox="0 0 24 24"><path fill="currentColor" d="M6 3h11a3 3 0 0 1 3 3v1h-3v12a2 2 0 0 1-2 2H6a3 3 0 0 1-3-3v-1h3V3Zm2 2v11h7v3a1 1 0 0 0 .5-.1V5H8Zm2 2h4v2h-4V7Zm0 4h4v2h-4v-2Z"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="currentColor" d="M13.2 5.3a1 1 0 0 1 1.4 0l6 6a1 1 0 0 1 0 1.4l-6 6a1 1 0 1 1-1.4-1.4l4.3-4.3H4a1 1 0 1 1 0-2h13.5l-4.3-4.3a1 1 0 0 1 0-1.4Z"/></symbol>
+      <symbol id="i-ext" viewBox="0 0 24 24"><path fill="currentColor" d="M14 3h7v7h-2V6.4l-8.3 8.3-1.4-1.4L17.6 5H14V3ZM5 5h6v2H5v12h12v-6h2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path fill="currentColor" d="M6.4 5 12 10.6 17.6 5 19 6.4 13.4 12l5.6 5.6-1.4 1.4-5.6-5.6L6.4 19 5 17.6 10.6 12 5 6.4 6.4 5Z"/></symbol>
+      <symbol id="i-prev" viewBox="0 0 24 24"><path fill="currentColor" d="M15.4 5.4 14 4l-8 8 8 8 1.4-1.4L8.8 12l6.6-6.6Z"/></symbol>
+      <symbol id="i-next" viewBox="0 0 24 24"><path fill="currentColor" d="M8.6 18.6 10 20l8-8-8-8-1.4 1.4 6.6 6.6-6.6 6.6Z"/></symbol>
       <symbol id="icon-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4a.5.5 0 0 0 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></symbol>
     </defs>
   </svg>
 
-  <!-- ============ HEADER ============ -->
-  <header class="site-header" id="top">
-    <div class="toran" aria-hidden="true"></div>
+  <!-- ===== TOP BAR: invocation + live darshan status ===== -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <p class="topbar__om" lang="hi"><span class="topbar__sym" aria-hidden="true">ॐ</span> ॥ श्री हनुमते नमः ॥ <span class="topbar__place">· मिर्ज़ापुर, उत्तर प्रदेश</span></p>
+      <p class="status" data-status role="status" aria-live="polite">
+        <span class="status__dot" aria-hidden="true"></span>
+        <span class="status__text">दर्शन समय देखें · See darshan timings</span>
+      </p>
+    </div>
+  </div>
+  <div class="toran" aria-hidden="true"></div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
     <nav class="nav container" aria-label="Main">
-      <a class="brand" href="#home" aria-label="Sankat Mochan Mandir — home">
-        <svg class="brand__mark" aria-hidden="true"><use href="#mandala"/></svg>
+      <a class="brand" href="#home">
+        <span class="brand__mark" aria-hidden="true"><svg><use href="#mandala"/></svg></span>
         <span class="brand__text">
-          <span class="brand__hi" lang="hi">संकट मोचन मंदिर</span>
-          <span class="brand__en">Mirzapur</span>
+          <span class="brand__hi" lang="hi">श्री संकट मोचन मंदिर</span>
+          <span class="brand__en">Mirzapur · Uttar Pradesh</span>
         </span>
       </a>
-      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
-        <span class="sr-only">Menu</span><span class="nav__bars" aria-hidden="true"></span>
-      </button>
-      <ul class="nav__menu" id="nav-menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#visit">Visitor Info</a></li>
-        <li><a href="#events">Events</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#donate">Donations</a></li>
-        <li><a href="#trust">Trust</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li class="nav__cta"><a class="btn btn--primary btn--sm" href="#donate">दान करें</a></li>
-      </ul>
+      <div class="nav__right">
+        <ul class="nav__menu" id="nav-menu">
+          <li><a href="#about"><span lang="hi">परिचय</span><small>About</small></a></li>
+          <li><a href="#family"><span lang="hi">मंदिर परिवार</span><small>Temple Family</small></a></li>
+          <li><a href="#visit"><span lang="hi">दर्शन समय</span><small>Visitor Info</small></a></li>
+          <li><a href="#events"><span lang="hi">उत्सव</span><small>Events</small></a></li>
+          <li><a href="#gallery"><span lang="hi">दर्शन दीर्घा</span><small>Gallery</small></a></li>
+          <li><a href="#trust"><span lang="hi">संस्थान</span><small>Trust</small></a></li>
+          <li><a href="#contact"><span lang="hi">संपर्क</span><small>Contact</small></a></li>
+        </ul>
+        <a class="btn btn--gold btn--sm nav__donate" href="#donate"><span lang="hi">दान करें</span> <span class="nav__donate-en">/ Donate</span></a>
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+          <span class="sr-only">Menu</span><span class="nav__bars" aria-hidden="true"></span>
+        </button>
+      </div>
     </nav>
   </header>
 
   <main id="main">
 
-    <!-- ============ 1. HOME / HERO ============ -->
+    <!-- ============ HERO ============ -->
     <section class="hero" id="home" aria-labelledby="hero-title">
       <canvas class="hero__petals" aria-hidden="true"></canvas>
-      <div class="hero__inner container">
-        <div class="hero__text">
-          <p class="hero__jai" lang="hi"><span class="hero__jai-text" data-reveal-letters>जय श्री राम</span></p>
+      <svg class="hero__bg-mandala" aria-hidden="true"><use href="#mandala"/></svg>
+      <div class="container hero__inner">
+        <header class="hero__head">
+          <p class="hero__jai" lang="hi"><span data-reveal-letters>जय श्री राम ॥ श्री हनुमते नमः</span></p>
           <h1 id="hero-title">
-            <span class="hero__hi" lang="hi">श्री संकट मोचन हनुमान</span>
+            <span class="hero__hi" lang="hi">श्री संकट मोचन हनुमान मंदिर</span>
             <span class="hero__en">Sankat Mochan Mandir, Mirzapur</span>
           </h1>
-          <p class="hero__lead">[REPLACE] One warm line welcoming devotees to the temple.</p>
-          <div class="hero__ctas">
-            <a class="btn btn--primary" href="#visit">Plan Your Visit</a>
-            <a class="btn btn--secondary" href="#donate">Donate / दान करें</a>
-          </div>
-        </div>
-        <div class="hero__deity">
-          <svg class="hero__mandala" aria-hidden="true"><use href="#mandala"/></svg>
-          <div class="hero__glow" aria-hidden="true"></div>
-          <div class="arch arch--hero">
-            <!-- [REPLACE] assets/images/hero-deity.jpg with the deity image from the poster -->
-            <img class="arch__img" src="assets/images/hero-deity.jpg" alt="Shri Sankat Mochan Hanuman ji, Mirzapur" width="900" height="1200" fetchpriority="high">
-          </div>
-          <svg class="hero__diya" aria-hidden="true"><use href="#diya"/></svg>
-        </div>
-      </div>
-    </section>
-
-    <!-- Today's timings strip -->
-    <section class="timings-strip" aria-label="Today's darshan timings">
-      <div class="container timings-strip__inner">
-        <p class="timings-strip__title"><svg aria-hidden="true"><use href="#diya"/></svg><span>आज के दर्शन · Today's Darshan</span></p>
-        <ul class="timings-strip__list" data-render="timings-strip"></ul>
-      </div>
-    </section>
-
-    <!-- Temple family -->
-    <section class="section family" aria-labelledby="family-title">
-      <div class="container">
-        <header class="section-head reveal">
-          <p class="section-head__hi" lang="hi">मंदिर परिवार</p>
-          <h2 id="family-title">Temple Family</h2>
-          <div class="divider" aria-hidden="true"><span class="rope"></span><svg><use href="#diya"/></svg><span class="rope"></span></div>
+          <!-- [REPLACE] draft line — confirm wording -->
+          <p class="hero__lead" lang="hi">संकटों को हरने वाले केसरीनंदन श्री हनुमान जी के पावन दर्शन हेतु आप सभी का स्वागत है।</p>
         </header>
-        <div class="family__grid">
-          <article class="mahant-card reveal" data-render="mahant"></article>
-          <ul class="sevak-grid" data-render="sevaks"></ul>
+
+        <div class="hero__stage">
+          <div class="shrine">
+            <svg class="shrine__halo" aria-hidden="true"><use href="#mandala"/></svg>
+            <div class="shrine__glow" aria-hidden="true"></div>
+            <div class="shrine__arch">
+              <span class="shrine__kalash" aria-hidden="true"><svg><use href="#diya"/></svg></span>
+              <div class="shrine__window">
+                <!-- [REPLACE] assets/images/hero-deity.jpg with the deity image from the poster -->
+                <img src="assets/images/hero-deity.jpg" alt="श्री संकट मोचन हनुमान जी, मिर्ज़ापुर" width="900" height="1200" fetchpriority="high">
+                <p class="shrine__caption" lang="hi">॥ संकट कटै मिटै सब पीरा ॥</p>
+              </div>
+            </div>
+            <span class="shrine__diya shrine__diya--l" aria-hidden="true"><svg><use href="#diya"/></svg></span>
+            <span class="shrine__diya shrine__diya--r" aria-hidden="true"><svg><use href="#diya"/></svg></span>
+          </div>
+
+          <aside class="hero__panel">
+            <div class="notice" data-announcement>
+              <p class="notice__title"><svg aria-hidden="true"><use href="#i-bell"/></svg><span lang="hi" data-a-title></span><small data-a-title-en></small></p>
+              <p class="notice__text" lang="hi" data-a-text></p>
+              <div class="notice__ctas">
+                <a class="btn btn--primary" href="#visit">दर्शन हेतु आएं <span class="btn__en">/ Plan Your Visit</span></a>
+                <a class="btn btn--outline-gold" href="#donate">दान करें <span class="btn__en">/ Donate</span></a>
+              </div>
+            </div>
+            <figure class="verse-pill">
+              <blockquote lang="hi">महावीर विक्रम बजरंगी। कुमति निवार सुमति के संगी॥</blockquote>
+              <figcaption>— श्री हनुमान चालीसा</figcaption>
+            </figure>
+          </aside>
+        </div>
+
+        <div class="aarti-strip">
+          <p class="aarti-strip__title"><svg aria-hidden="true"><use href="#i-bell"/></svg><span lang="hi">दैनिक आरती</span><small>Daily Aarti</small></p>
+          <ol class="aarti-strip__list" data-render="aartis"></ol>
         </div>
       </div>
     </section>
 
-    <!-- ============ 2. ABOUT ============ -->
-    <section class="section section--deep about" id="about" aria-labelledby="about-title">
-      <svg class="section-mandala" aria-hidden="true"><use href="#mandala"/></svg>
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about" aria-labelledby="about-title">
       <div class="container">
         <header class="section-head reveal">
-          <p class="section-head__hi" lang="hi">मंदिर के बारे में</p>
+          <p class="kicker" lang="hi">॥ पावन इतिहास व महिमा ॥</p>
           <h2 id="about-title">About the Temple</h2>
           <div class="divider" aria-hidden="true"><span class="rope"></span><svg><use href="#diya"/></svg><span class="rope"></span></div>
         </header>
         <div class="about__grid">
-          <div class="about__text reveal">
-            <p>[REPLACE] The history of Sankat Mochan Mandir, Mirzapur — when and how the temple was established, and by whom.</p>
-            <p>[REPLACE] The significance of the temple for devotees of Mirzapur and the region, and the traditions that continue here today.</p>
-            <p>[REPLACE] Any notable features of the murti, the temple building, or annual celebrations.</p>
-          </div>
-          <figure class="quote reveal">
-            <blockquote lang="hi">
-              <p>संकट कटै मिटै सब पीरा।<br>जो सुमिरै हनुमत बलबीरा॥</p>
-            </blockquote>
-            <figcaption>All troubles end and every pain is removed for the one who remembers the mighty Hanuman. <cite>— Shri Hanuman Chalisa</cite></figcaption>
+          <figure class="verse-card reveal">
+            <svg class="verse-card__mandala" aria-hidden="true"><use href="#mandala"/></svg>
+            <blockquote lang="hi"><p>संकट कटै मिटै सब पीरा।<br>जो सुमिरै हनुमत बलबीरा॥</p></blockquote>
+            <figcaption>
+              <cite lang="hi">— श्री हनुमान चालीसा</cite>
+              <span>All troubles end and every pain is removed for the one who remembers the mighty Hanuman.</span>
+            </figcaption>
           </figure>
+          <div class="about__text reveal">
+            <h3 lang="hi">मिर्ज़ापुर का श्री संकट मोचन हनुमान मंदिर</h3>
+            <!-- [REPLACE] temple history — the lines below are placeholders -->
+            <p>[REPLACE] मंदिर का इतिहास: स्थापना कब और किसके द्वारा हुई, एवं मंदिर से जुड़ी मान्यताएँ।</p>
+            <p>[REPLACE] The history and significance of Sankat Mochan Mandir, Mirzapur, and the traditions that continue here today.</p>
+            <ul class="pillars">
+              <li class="pillar"><svg aria-hidden="true"><use href="#diya"/></svg><h4 lang="hi">नित्य आरती</h4><p>प्रातः एवं सायं आरती व हनुमान चालीसा</p></li>
+              <li class="pillar"><svg aria-hidden="true"><use href="#i-bell"/></svg><h4 lang="hi">मंगलवार व शनिवार</h4><p>[REPLACE] विशेष दर्शन, श्रृंगार व सुंदरकांड</p></li>
+              <li class="pillar"><svg aria-hidden="true"><use href="#mandala"/></svg><h4 lang="hi">उत्सव</h4><p>हनुमान जयंती, राम नवमी व अन्य पर्व</p></li>
+            </ul>
+          </div>
         </div>
-        <ul class="highlights">
-          <li class="highlight reveal">
-            <svg aria-hidden="true"><use href="#diya"/></svg>
-            <h3>Daily Aarti</h3>
-            <p>Mangla, Bhog, Sandhya and Shayan aarti every day. See timings below.</p>
-          </li>
-          <li class="highlight reveal">
-            <svg aria-hidden="true"><use href="#diya"/></svg>
-            <h3>Tuesday &amp; Saturday</h3>
-            <p>[REPLACE] Special darshan and shringar on Hanuman ji's days.</p>
-          </li>
-          <li class="highlight reveal">
-            <svg aria-hidden="true"><use href="#diya"/></svg>
-            <h3>Festivals</h3>
-            <p>Hanuman Jayanti, Ram Navami and more. <a href="#events">See upcoming events →</a></p>
-          </li>
-        </ul>
       </div>
     </section>
 
-    <!-- ============ 3. VISITOR INFORMATION ============ -->
+    <!-- ============ TEMPLE FAMILY ============ -->
+    <section class="section section--sandal family" id="family" aria-labelledby="family-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker" lang="hi">॥ सेवा व परंपरा ॥</p>
+          <h2 id="family-title">Temple Family</h2>
+          <p class="section-head__sub" lang="hi">मंदिर की पूजा परंपरा एवं सेवा को समर्पित पूज्य महंत जी एवं सेवकगण</p>
+          <div class="divider" aria-hidden="true"><span class="rope"></span><svg><use href="#diya"/></svg><span class="rope"></span></div>
+        </header>
+        <article class="mahant reveal" data-render="mahant"></article>
+        <ul class="sevaks" data-render="sevaks"></ul>
+      </div>
+    </section>
+
+    <!-- ============ VISITOR INFO ============ -->
     <section class="section visit" id="visit" aria-labelledby="visit-title">
       <div class="container">
         <header class="section-head reveal">
-          <p class="section-head__hi" lang="hi">दर्शनार्थी जानकारी</p>
-          <h2 id="visit-title">Visitor Information</h2>
+          <p class="kicker" lang="hi">॥ दर्शन व यात्रा संदर्शिका ॥</p>
+          <h2 id="visit-title">Darshan Timings &amp; Visitor Guide</h2>
           <div class="divider" aria-hidden="true"><span class="rope"></span><svg><use href="#diya"/></svg><span class="rope"></span></div>
         </header>
 
         <div class="visit__grid">
-          <div class="card reveal">
-            <h3>Darshan &amp; Aarti Timings</h3>
-            <table class="timings-table">
-              <caption class="sr-only">Darshan and aarti timings</caption>
-              <thead><tr><th scope="col">Darshan / Aarti</th><th scope="col">Time</th></tr></thead>
-              <tbody data-render="timings-table"></tbody>
-            </table>
-            <p class="small muted">Timings may change on festivals. Please confirm on WhatsApp before a special visit.</p>
-          </div>
+          <div class="visit__main">
+            <div class="panel reveal">
+              <div class="panel__bar">
+                <h3 lang="hi">दैनिक दर्शन समय <small>Daily Schedule</small></h3>
+                <span class="tag tag--gold" lang="hi">प्रतिदिन</span>
+              </div>
+              <div class="table-wrap">
+                <table class="schedule">
+                  <caption class="sr-only">Daily darshan and aarti schedule</caption>
+                  <thead><tr><th scope="col" lang="hi">अनुष्ठान / दर्शन</th><th scope="col" lang="hi">समय</th><th scope="col" lang="hi">विवरण</th></tr></thead>
+                  <tbody data-render="schedule"></tbody>
+                </table>
+              </div>
+              <p class="panel__note" lang="hi" data-schedule-note></p>
+            </div>
 
-          <div class="card reveal">
-            <h3>How to Reach</h3>
-            <ul class="reach">
-              <li><strong>By Rail</strong> Mirzapur Railway Station (MZP). [REPLACE] distance / auto-rickshaw time from the station.</li>
-              <li><strong>By Road</strong> [REPLACE] route and landmarks, parking details.</li>
-              <li><strong>By Air</strong> Nearest airport: Lal Bahadur Shastri International Airport, Varanasi. [REPLACE] travel time by road.</li>
-            </ul>
-            <div class="map">
-              <iframe data-map title="Map to Sankat Mochan Mandir, Mirzapur" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            <div class="card card--ornate reveal">
+              <h3 class="card__title"><svg aria-hidden="true"><use href="#i-scroll"/></svg><span lang="hi">मंदिर मर्यादा</span><small>Temple Etiquette</small></h3>
+              <!-- [REPLACE] confirm each rule with the temple -->
+              <ul class="rules">
+                <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><strong lang="hi">पहनावा</strong> [REPLACE] कृपया शालीन एवं पारंपरिक वस्त्र धारण करें।</span></li>
+                <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><strong lang="hi">जूते-चप्पल</strong> [REPLACE] निर्धारित स्थान पर ही उतारें।</span></li>
+                <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><strong lang="hi">प्रसाद</strong> [REPLACE] प्रसाद अर्पण संबंधी नियम।</span></li>
+                <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><strong lang="hi">फोटोग्राफी</strong> [REPLACE] गर्भगृह में फोटो/वीडियो संबंधी नियम।</span></li>
+              </ul>
+            </div>
+
+            <div class="card card--ornate reveal">
+              <h3 class="card__title"><svg aria-hidden="true"><use href="#i-pin"/></svg><span lang="hi">कैसे पहुँचें</span><small>How to Reach</small></h3>
+              <ul class="reach">
+                <li><span class="reach__icon"><svg aria-hidden="true"><use href="#i-train"/></svg></span><div><strong>By Rail <span lang="hi">· रेल मार्ग</span></strong><p>Mirzapur Railway Station (MZP). [REPLACE] distance and auto/e-rickshaw time to the temple.</p></div></li>
+                <li><span class="reach__icon"><svg aria-hidden="true"><use href="#i-road"/></svg></span><div><strong>By Road <span lang="hi">· सड़क मार्ग</span></strong><p>Connected by road to Varanasi and Prayagraj. [REPLACE] route, landmarks and parking.</p></div></li>
+                <li><span class="reach__icon"><svg aria-hidden="true"><use href="#i-plane"/></svg></span><div><strong>By Air <span lang="hi">· हवाई मार्ग</span></strong><p>Nearest airport: Lal Bahadur Shastri International Airport, Varanasi (VNS). [REPLACE] travel time.</p></div></li>
+              </ul>
             </div>
           </div>
 
-          <div class="card reveal">
-            <h3>Temple Guidelines</h3>
-            <ul class="guidelines">
-              <li><strong>Dress code</strong> [REPLACE] Modest traditional attire is requested.</li>
-              <li><strong>Footwear</strong> [REPLACE] Leave footwear at the stand outside the temple.</li>
-              <li><strong>Photography</strong> [REPLACE] Photography inside the garbhagriha is not permitted.</li>
-              <li><strong>Prasad</strong> [REPLACE] Where prasad can be bought / offered.</li>
-            </ul>
-          </div>
-
-          <form class="card form reveal" id="visitor-form" novalidate data-wa-form="visitor">
-            <h3>Visitor Enquiry</h3>
-            <p class="small muted">Send us your details on WhatsApp and the temple office will reply.</p>
-            <div class="field"><label for="v-name">Name *</label><input id="v-name" name="name" autocomplete="name" required></div>
-            <div class="field"><label for="v-phone">Phone *</label><input id="v-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required></div>
+          <form class="form-card form-card--sticky reveal" id="visitor-form" novalidate data-wa-form="visitor">
+            <div class="form-card__head">
+              <span class="form-card__icon" aria-hidden="true"><svg><use href="#icon-wa"/></svg></span>
+              <h3 lang="hi">दर्शन व अनुष्ठान पूछताछ</h3>
+              <p>Visitor enquiry — sent to the temple on WhatsApp</p>
+            </div>
+            <div class="field"><label for="v-name"><span lang="hi">नाम</span> · Name *</label><input id="v-name" name="name" autocomplete="name" required></div>
             <div class="field-row">
-              <div class="field"><label for="v-date">Date of visit *</label><input id="v-date" name="date" type="date" required></div>
-              <div class="field"><label for="v-people">No. of people *</label><input id="v-people" name="people" type="number" min="1" max="500" value="1" required></div>
+              <div class="field"><label for="v-phone"><span lang="hi">मोबाइल</span> · Phone *</label><input id="v-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required></div>
+              <div class="field"><label for="v-city"><span lang="hi">शहर</span> · City</label><input id="v-city" name="city" autocomplete="address-level2"></div>
             </div>
-            <div class="field"><label for="v-purpose">Purpose *</label>
+            <div class="field-row">
+              <div class="field"><label for="v-date"><span lang="hi">आगमन तिथि</span> · Date *</label><input id="v-date" name="date" type="date" required></div>
+              <div class="field"><label for="v-people"><span lang="hi">व्यक्ति</span> · People *</label><input id="v-people" name="people" type="number" min="1" max="500" value="1" required></div>
+            </div>
+            <div class="field"><label for="v-purpose"><span lang="hi">विषय</span> · Purpose *</label>
               <select id="v-purpose" name="purpose" required>
-                <option value="Darshan">Darshan</option><option value="Puja">Puja</option><option value="Other">Other</option>
+                <option value="दर्शन (Darshan)">दर्शन (Darshan)</option>
+                <option value="पूजा / अनुष्ठान (Puja)">पूजा / अनुष्ठान (Puja)</option>
+                <option value="सुंदरकांड पाठ (Sundarkand Path)">सुंदरकांड पाठ (Sundarkand Path)</option>
+                <option value="चोला अर्पण (Chola)">चोला अर्पण (Chola)</option>
+                <option value="भंडारा (Bhandara)">भंडारा (Bhandara)</option>
+                <option value="अन्य (Other)">अन्य (Other)</option>
               </select></div>
-            <div class="field"><label for="v-msg">Message</label><textarea id="v-msg" name="message" rows="3"></textarea></div>
-            <button class="btn btn--primary btn--block" type="submit"><svg aria-hidden="true"><use href="#icon-wa"/></svg>Send on WhatsApp</button>
+            <div class="field"><label for="v-msg"><span lang="hi">संदेश</span> · Message</label><textarea id="v-msg" name="message" rows="3"></textarea></div>
+            <button class="btn btn--wa btn--block" type="submit"><svg aria-hidden="true"><use href="#icon-wa"/></svg><span lang="hi">व्हाट्सएप पर भेजें</span> / Send</button>
           </form>
         </div>
       </div>
     </section>
 
-    <!-- ============ 4. EVENTS ============ -->
+    <!-- ============ EVENTS ============ -->
     <section class="section section--sandal events" id="events" aria-labelledby="events-title">
       <div class="container">
         <header class="section-head reveal">
-          <p class="section-head__hi" lang="hi">आगामी उत्सव</p>
-          <h2 id="events-title">Upcoming Events</h2>
+          <p class="kicker" lang="hi">॥ पर्व व उत्सव ॥</p>
+          <h2 id="events-title">Festivals &amp; Events</h2>
           <div class="divider" aria-hidden="true"><span class="rope"></span><svg><use href="#diya"/></svg><span class="rope"></span></div>
         </header>
         <div class="events__grid" data-render="events"></div>
       </div>
     </section>
 
-    <!-- ============ 5. GALLERY ============ -->
+    <!-- ============ GALLERY ============ -->
     <section class="section gallery" id="gallery" aria-labelledby="gallery-title">
       <div class="container">
         <header class="section-head reveal">
-          <p class="section-head__hi" lang="hi">चित्र दीर्घा</p>
+          <p class="kicker" lang="hi">॥ दिव्य दर्शन दीर्घा ॥</p>
           <h2 id="gallery-title">Gallery</h2>
+          <p class="section-head__sub" lang="hi">प्रभु के श्रृंगार, आरती, मंदिर परिसर एवं उत्सवों के पावन दृश्य</p>
           <div class="divider" aria-hidden="true"><span class="rope"></span><svg><use href="#diya"/></svg><span class="rope"></span></div>
         </header>
         <div class="filters" role="group" aria-label="Filter gallery">
-          <button type="button" class="chip is-active" data-filter="all" aria-pressed="true">All</button>
-          <button type="button" class="chip" data-filter="shringar" aria-pressed="false">Deity Shringar</button>
-          <button type="button" class="chip" data-filter="festivals" aria-pressed="false">Festivals</button>
-          <button type="button" class="chip" data-filter="temple" aria-pressed="false">Temple</button>
-          <button type="button" class="chip" data-filter="events" aria-pressed="false">Events</button>
+          <button type="button" class="chip is-active" data-filter="all" aria-pressed="true"><span lang="hi">सभी</span> · All</button>
+          <button type="button" class="chip" data-filter="shringar" aria-pressed="false"><span lang="hi">श्रृंगार</span> · Shringar</button>
+          <button type="button" class="chip" data-filter="aarti" aria-pressed="false"><span lang="hi">आरती</span> · Aarti</button>
+          <button type="button" class="chip" data-filter="parisar" aria-pressed="false"><span lang="hi">परिसर</span> · Temple</button>
+          <button type="button" class="chip" data-filter="utsav" aria-pressed="false"><span lang="hi">उत्सव</span> · Festivals</button>
         </div>
-        <div class="gallery__grid" data-render="gallery"></div>
+        <ul class="gallery__grid" data-render="gallery"></ul>
       </div>
     </section>
 
-    <!-- ============ 6. DONATIONS ============ -->
+    <!-- ============ DONATIONS ============ -->
     <section class="section section--deep donate" id="donate" aria-labelledby="donate-title">
-      <svg class="section-mandala section-mandala--right" aria-hidden="true"><use href="#mandala"/></svg>
+      <svg class="section-mandala" aria-hidden="true"><use href="#mandala"/></svg>
       <div class="container">
         <header class="section-head reveal">
-          <p class="section-head__hi" lang="hi">दान · सेवा</p>
-          <h2 id="donate-title">Donations</h2>
+          <p class="kicker kicker--pill" lang="hi">॥ सेवा व दान ॥</p>
+          <h2 id="donate-title">Seva &amp; Donations</h2>
+          <p class="section-head__sub" lang="hi">मंदिर के नित्य भोग, अखंड दीप, उत्सव एवं विकास हेतु अपनी सामर्थ्यानुसार सेवा अर्पित करें।</p>
           <div class="divider" aria-hidden="true"><span class="rope"></span><svg><use href="#diya"/></svg><span class="rope"></span></div>
-          <p class="section-head__lead">Every offering, big or small, supports the daily seva, bhog and upkeep of Hanuman ji's temple.</p>
         </header>
 
         <div class="donate__grid">
-          <div class="qr reveal">
-            <div class="qr__frame">
+          <div class="qr-card reveal">
+            <div class="qr-card__frame">
               <img data-qr src="assets/images/donation-qr.png" alt="UPI QR code for donations to Sankat Mochan Mandir" width="600" height="600" loading="lazy">
             </div>
-            <p class="qr__label">Scan with any UPI app</p>
+            <p class="qr-card__label">UPI ID</p>
             <div class="upi">
               <code class="upi__id" data-upi-id></code>
-              <button type="button" class="btn btn--ghost btn--sm" data-copy-upi>Copy</button>
+              <button type="button" class="upi__copy" data-copy-upi><span lang="hi">कॉपी करें</span></button>
             </div>
             <p class="upi__status" role="status" aria-live="polite"></p>
-            <p class="qr__note">After donating via QR, please share the screenshot on WhatsApp.</p>
+            <p class="qr-card__note" lang="hi">Google Pay, PhonePe, Paytm या किसी भी UPI ऐप से स्कैन करें। भुगतान के बाद स्क्रीनशॉट व्हाट्सएप पर भेजें।</p>
           </div>
 
-          <form class="card form form--on-dark reveal" id="donation-form" novalidate data-wa-form="donation">
-            <h3>Donation Details</h3>
-            <div class="field"><label for="d-name">Name *</label><input id="d-name" name="name" autocomplete="name" required></div>
-            <div class="field"><label for="d-phone">Phone *</label><input id="d-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required></div>
+          <form class="form-card reveal" id="donation-form" novalidate data-wa-form="donation">
+            <div class="form-card__head form-card__head--left">
+              <h3 lang="hi">सेवा संकल्प</h3>
+              <p>Tell the temple about your offering — sent on WhatsApp</p>
+            </div>
             <fieldset class="field">
-              <legend>Amount (₹) *</legend>
+              <legend><span lang="hi">सेवा राशि</span> · Amount (₹) *</legend>
               <div class="amount-chips" data-render="amounts"></div>
-              <div class="field field--custom" hidden>
-                <label for="d-custom">Custom amount (₹)</label>
-                <input id="d-custom" name="custom" type="number" min="1" inputmode="numeric">
-              </div>
+              <label class="sr-only" for="d-amount">Amount in rupees</label>
+              <div class="amount-input"><span aria-hidden="true">₹</span><input id="d-amount" name="amount" type="number" min="1" inputmode="numeric" required></div>
             </fieldset>
-            <div class="field"><label for="d-purpose">Purpose *</label><select id="d-purpose" name="purpose" required data-render="purposes"></select></div>
+            <div class="field"><label for="d-purpose"><span lang="hi">सेवा का उद्देश्य</span> · Purpose *</label><select id="d-purpose" name="purpose" required data-render="purposes"></select></div>
+            <div class="field-row">
+              <div class="field"><label for="d-name"><span lang="hi">दानदाता का नाम</span> · Name *</label><input id="d-name" name="name" autocomplete="name" required></div>
+              <div class="field"><label for="d-phone"><span lang="hi">मोबाइल</span> · Phone *</label><input id="d-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required></div>
+            </div>
+            <div class="field-row">
+              <div class="field"><label for="d-gotra"><span lang="hi">गोत्र</span> · Gotra <span class="opt">(संकल्प हेतु, वैकल्पिक)</span></label><input id="d-gotra" name="gotra"></div>
+              <div class="field"><label for="d-city"><span lang="hi">शहर</span> · City</label><input id="d-city" name="city" autocomplete="address-level2"></div>
+            </div>
             <fieldset class="field">
-              <legend>Status</legend>
-              <div class="radio-row">
-                <label class="radio"><input type="radio" name="status" value="I have donated" checked> I have donated</label>
-                <label class="radio"><input type="radio" name="status" value="I wish to donate"> I wish to donate</label>
+              <legend><span lang="hi">स्थिति</span> · Status</legend>
+              <div class="segmented">
+                <label><input type="radio" name="status" value="मैंने दान कर दिया है (I have donated)" checked><span lang="hi">दान कर दिया है</span></label>
+                <label><input type="radio" name="status" value="मैं दान करना चाहता/चाहती हूँ (I wish to donate)"><span lang="hi">दान करना है</span></label>
               </div>
             </fieldset>
-            <div class="field"><label for="d-msg">Message</label><textarea id="d-msg" name="message" rows="3"></textarea></div>
-            <button class="btn btn--primary btn--block" type="submit"><svg aria-hidden="true"><use href="#icon-wa"/></svg>Send on WhatsApp</button>
+            <div class="field"><label for="d-msg"><span lang="hi">संदेश</span> · Message</label><textarea id="d-msg" name="message" rows="2"></textarea></div>
+            <button class="btn btn--primary btn--block btn--lg" type="submit"><svg aria-hidden="true"><use href="#icon-wa"/></svg><span lang="hi">व्हाट्सएप पर भेजें</span> / Send on WhatsApp</button>
+            <p class="form-card__foot" lang="hi">रसीद हेतु भुगतान का स्क्रीनशॉट व्हाट्सएप पर अवश्य भेजें।</p>
           </form>
         </div>
       </div>
     </section>
 
-    <!-- ============ 7. TRUST ============ -->
+    <!-- ============ TRUST ============ -->
     <section class="section trust" id="trust" aria-labelledby="trust-title">
       <div class="container">
         <article class="trust-card reveal">
           <svg class="trust-card__mandala" aria-hidden="true"><use href="#mandala"/></svg>
           <div class="trust-card__body">
-            <p class="eyebrow">Managed by</p>
-            <h2 id="trust-title">Sankat Mochan Seva Sansthan</h2>
-            <p>[REPLACE] A short description of the Sansthan: when it was formed, what it does for the temple and the community.</p>
-            <a class="btn btn--secondary" data-sansthan-link href="https://SANSTHAN-URL-HERE" target="_blank" rel="noopener">Visit Sansthan Website →</a>
+            <p class="tag tag--gold" lang="hi">मंदिर प्रबंधन · Managed by</p>
+            <h2 id="trust-title"><span lang="hi" data-trust-name></span><small data-trust-name-en></small></h2>
+            <p lang="hi" data-trust-desc></p>
+            <ul class="trust-card__chips" data-render="trust-activities"></ul>
+          </div>
+          <div class="trust-card__cta">
+            <a class="btn btn--gold" data-trust-link href="https://SANSTHAN-URL-HERE" target="_blank" rel="noopener">Visit Sansthan Website <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            <p class="trust-card__reg" data-trust-reg hidden></p>
           </div>
         </article>
       </div>
     </section>
 
-    <!-- ============ 8. CONTACT ============ -->
+    <!-- ============ CONTACT ============ -->
     <section class="section section--sandal contact" id="contact" aria-labelledby="contact-title">
       <div class="container">
         <header class="section-head reveal">
-          <p class="section-head__hi" lang="hi">संपर्क करें</p>
-          <h2 id="contact-title">Contact</h2>
+          <p class="kicker" lang="hi">॥ संपर्क व मार्गदर्शन ॥</p>
+          <h2 id="contact-title">Contact &amp; Location</h2>
           <div class="divider" aria-hidden="true"><span class="rope"></span><svg><use href="#diya"/></svg><span class="rope"></span></div>
         </header>
         <div class="contact__grid">
-          <div class="reveal">
-            <dl class="contact-list">
-              <div><dt>Address</dt><dd data-contact="address"></dd></div>
-              <div><dt>Phone / WhatsApp</dt><dd><a data-contact="phone" href="#"></a></dd></div>
-              <div><dt>Email</dt><dd><a data-contact="email" href="#"></a></dd></div>
-            </dl>
-            <div class="map map--tall">
+          <div class="contact__cards">
+            <div class="info-card reveal"><span class="info-card__icon"><svg aria-hidden="true"><use href="#i-pin"/></svg></span><div><h3><span lang="hi">पता</span> · Address</h3><p data-contact="address"></p></div></div>
+            <div class="info-card reveal"><span class="info-card__icon"><svg aria-hidden="true"><use href="#i-phone"/></svg></span><div><h3><span lang="hi">फोन</span> · Phone</h3><div data-contact="phones"></div><p class="info-card__meta" data-contact="hours"></p></div></div>
+            <div class="info-card reveal"><span class="info-card__icon"><svg aria-hidden="true"><use href="#i-mail"/></svg></span><div><h3><span lang="hi">ईमेल</span> · Email</h3><div data-contact="emails"></div></div></div>
+
+            <form class="form-card reveal" id="contact-form" novalidate data-wa-form="contact">
+              <div class="form-card__head form-card__head--left"><h3 lang="hi">संदेश भेजें</h3><p>Send a message on WhatsApp</p></div>
+              <div class="field-row">
+                <div class="field"><label for="c-name"><span lang="hi">नाम</span> · Name *</label><input id="c-name" name="name" autocomplete="name" required></div>
+                <div class="field"><label for="c-phone"><span lang="hi">मोबाइल</span> · Phone *</label><input id="c-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required></div>
+              </div>
+              <div class="field"><label for="c-msg"><span lang="hi">संदेश</span> · Message *</label><textarea id="c-msg" name="message" rows="3" required></textarea></div>
+              <button class="btn btn--wa btn--block" type="submit"><svg aria-hidden="true"><use href="#icon-wa"/></svg><span lang="hi">व्हाट्सएप पर भेजें</span> / Send</button>
+            </form>
+          </div>
+          <div class="map-card reveal">
+            <div class="map-card__frame">
               <iframe data-map title="Map to Sankat Mochan Mandir, Mirzapur" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
             </div>
+            <a class="btn btn--maroon" data-map-link href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg><span lang="hi">गूगल मैप्स पर मार्ग देखें</span> / Directions</a>
           </div>
-          <form class="card form reveal" id="contact-form" novalidate data-wa-form="contact">
-            <h3>Send a Message</h3>
-            <div class="field"><label for="c-name">Name *</label><input id="c-name" name="name" autocomplete="name" required></div>
-            <div class="field"><label for="c-phone">Phone *</label><input id="c-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required></div>
-            <div class="field"><label for="c-msg">Message *</label><textarea id="c-msg" name="message" rows="4" required></textarea></div>
-            <button class="btn btn--primary btn--block" type="submit"><svg aria-hidden="true"><use href="#icon-wa"/></svg>Send on WhatsApp</button>
-          </form>
         </div>
       </div>
     </section>
@@ -389,30 +451,42 @@
 
   <!-- ============ FOOTER ============ -->
   <footer class="site-footer">
-    <div class="rope rope--full" aria-hidden="true"></div>
+    <div class="toran toran--footer" aria-hidden="true"></div>
     <div class="container footer__grid">
       <div class="footer__brand">
         <svg class="footer__mandala" aria-hidden="true"><use href="#mandala"/></svg>
         <p class="footer__hi" lang="hi">श्री संकट मोचन हनुमान मंदिर</p>
         <p class="footer__en">Sankat Mochan Mandir, Mirzapur</p>
-        <p class="footer__jai" lang="hi">जय श्री राम</p>
+        <p class="footer__doha" lang="hi">॥ पवन तनय संकट हरन, मंगल मूरति रूप ॥</p>
       </div>
-      <nav aria-label="Footer">
-        <h2 class="footer__title">Quick Links</h2>
+      <nav aria-labelledby="f-links">
+        <h2 class="footer__title" id="f-links"><span lang="hi">शीघ्र लिंक</span> · Quick Links</h2>
         <ul class="footer__links">
-          <li><a href="#about">About</a></li><li><a href="#visit">Visitor Info</a></li>
-          <li><a href="#events">Events</a></li><li><a href="#gallery">Gallery</a></li>
-          <li><a href="#donate">Donations</a></li><li><a href="#contact">Contact</a></li>
+          <li><a href="#about">परिचय · About</a></li>
+          <li><a href="#family">मंदिर परिवार · Temple Family</a></li>
+          <li><a href="#visit">दर्शन समय · Timings</a></li>
+          <li><a href="#events">उत्सव · Events</a></li>
+          <li><a href="#gallery">दर्शन दीर्घा · Gallery</a></li>
+          <li><a href="#contact">संपर्क · Contact</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="f-seva">
+        <h2 class="footer__title" id="f-seva"><span lang="hi">सेवा</span> · Seva</h2>
+        <ul class="footer__links">
+          <li><a href="#donate">दान करें · Donate</a></li>
+          <li><a href="#donate">अखंड दीप सेवा</a></li>
+          <li><a href="#donate">चोला व भोग सेवा</a></li>
+          <li><a href="#trust">संकट मोचन सेवा संस्थान</a></li>
         </ul>
       </nav>
       <div>
-        <h2 class="footer__title">Darshan Timings</h2>
-        <ul class="footer__timings" data-render="timings-footer"></ul>
+        <h2 class="footer__title"><span lang="hi">आरती समय</span> · Aarti</h2>
+        <ul class="footer__timings" data-render="aartis-footer"></ul>
       </div>
     </div>
     <div class="container footer__bottom">
-      <p>Site managed by Sankat Mochan Seva Sansthan</p>
-      <p>© <span data-year></span> Sankat Mochan Mandir, Mirzapur · Developed by <a href="https://tarkbyte.com" target="_blank" rel="noopener">Tarkbyte</a></p>
+      <p>© <span data-year></span> <span lang="hi">श्री संकट मोचन मंदिर, मिर्ज़ापुर</span> · Site managed by Sankat Mochan Seva Sansthan</p>
+      <p>Developed by <a href="https://tarkbyte.com" target="_blank" rel="noopener">Tarkbyte</a></p>
     </div>
   </footer>
 
@@ -421,12 +495,21 @@
     <svg aria-hidden="true"><use href="#icon-wa"/></svg>
   </a>
 
-  <!-- Libraries (CDN) -->
+  <!-- Lightbox -->
+  <dialog class="lightbox" aria-label="Gallery image viewer">
+    <button type="button" class="lightbox__btn lightbox__close" data-lb="close" aria-label="Close"><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+    <button type="button" class="lightbox__btn lightbox__prev" data-lb="prev" aria-label="Previous image"><svg aria-hidden="true"><use href="#i-prev"/></svg></button>
+    <figure class="lightbox__figure">
+      <img class="lightbox__img" alt="">
+      <figcaption class="lightbox__caption" lang="hi"></figcaption>
+    </figure>
+    <button type="button" class="lightbox__btn lightbox__next" data-lb="next" aria-label="Next image"><svg aria-hidden="true"><use href="#i-next"/></svg></button>
+  </dialog>
+
+  <!-- Animation library (optional — the site works without it) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/js/glightbox.min.js" defer></script>
-  <!-- Site -->
-  <script src="assets/js/data.js?v=1" defer></script>
-  <script src="assets/js/main.js?v=1" defer></script>
+  <script src="assets/js/data.js?v=2" defer></script>
+  <script src="assets/js/main.js?v=2" defer></script>
 </body>
 </html>
