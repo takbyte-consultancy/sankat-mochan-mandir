@@ -9,6 +9,8 @@ assets/js/data.js       ← EDIT THIS: timings, sevaks, events, gallery, UPI, co
 assets/js/main.js       ← behaviour + the WhatsApp number (top of file)
 assets/images/          ← photos (currently placeholders)
 .htaccess               ← HTTPS, compression, caching for Hostinger
+package.json, server.js ← only for Hostinger's Node.js app deploy (no dependencies)
+scripts/build.js        ← copies the site into dist/
 ```
 
 Open `index.html` in a browser to preview it locally. It works without a server.
@@ -79,6 +81,28 @@ For a weekly or monthly event, use `recurring: "प्रत्येक मं�
 After editing, commit and push to GitHub. Hostinger deploys the change automatically (see below).
 
 > If a returning visitor still sees the old version, raise the `?v=` number on the `assets/...` links in `index.html` (for example `?v=3` → `?v=4`).
+
+---
+
+## Deploy on Hostinger as a Node.js app (the option that asks for `package.json`)
+
+If Hostinger's **Node.js Web App / Deploy from GitHub** screen asks for a `package.json`, it is included. The site has **no dependencies**, so the install is instant. Use these settings:
+
+| Setting | Value |
+|---|---|
+| Framework / preset | **Other** (or "Express"/"Node.js") |
+| Node version | 18 or newer (20 recommended) |
+| Install command | `npm install` |
+| Build command | `npm run build` |
+| Output / publish directory | `dist` |
+| Start command / entry file | `npm start` (entry file: `server.js`) |
+
+- `npm run build` copies `index.html`, `robots.txt`, `.htaccess` and `assets/` into `dist/`.
+- `npm start` runs `server.js`, a small static server with no dependencies. It serves `dist/` on the port Hostinger gives it (`PORT`).
+- If the screen only asks for a build command and an output directory, it is serving static files, and `server.js` is not used.
+- Local preview: `npm run dev`, then open http://localhost:3000.
+
+If you use hPanel's plain **Git** deploy into `public_html` instead (below), `package.json` is not needed. It does no harm there either.
 
 ---
 

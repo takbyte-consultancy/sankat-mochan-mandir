@@ -1,0 +1,17 @@
+{
+  "name": "sankat-mochan-mandir-mirzapur",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static website for Shri Sankat Mochan Hanuman Mandir, Mirzapur. No framework, no dependencies.",
+  "license": "UNLICENSED",
+  "author": "Tarkbyte (https://tarkbyte.com)",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "start": "node server.js",
+    "dev": "node server.js --root ."
+  }
+}
