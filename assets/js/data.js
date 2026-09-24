@@ -145,7 +145,7 @@ window.SITE_DATA = {
     phones: [
       { label: "मंदिर कार्यालय", number: "+91 8874722227" }
     ],
-    officeHours: "[REPLACE] प्रतिदिन प्रातः 06:00 से रात्रि 09:00",
+    officeHours: "प्रतिदिन प्रातः 06:00 से रात्रि 09:00",
     emails: ["sankatmochansevamzp@gmail.com"],
     // Google Maps → Share → Embed a map → copy only the src="..." URL
     mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.559496346346!2d82.57221517538028!3d25.150579377740968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398fc1cdd0accadb%3A0x261496e7036d6200!2sSankat%20Mochan%20Mandir%2C%20Mirjapur!5e0!3m2!1sen!2sin!4v1790249160039!5m2!1sen!2sin", // [REPLACE]
