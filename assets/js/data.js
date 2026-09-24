@@ -77,7 +77,7 @@ window.SITE_DATA = {
       date: "2027-04-21",                         // [REPLACE] confirm date
       location: "मुख्य मंदिर",
       image: "assets/images/event-1.jpg",
-      description: "[REPLACE] विशेष श्रृंगार, सुंदरकांड पाठ, महाआरती एवं भंडारा।"
+      description: "विशेष श्रृंगार, सुंदरकांड पाठ, महाआरती एवं भंडारा।"
     },
     {
       title: "Shri Ram Navami", titleHi: "श्री राम नवमी महोत्सव",
@@ -85,35 +85,35 @@ window.SITE_DATA = {
       date: "2027-04-15",                         // [REPLACE] confirm date
       location: "मुख्य मंदिर",
       image: "assets/images/event-2.jpg",
-      description: "[REPLACE] प्रभु श्री राम का प्राकट्योत्सव, रामचरितमानस पाठ एवं प्रसाद वितरण।"
+      description: "प्रभु श्री राम का प्राकट्योत्सव, रामचरितमानस पाठ एवं प्रसाद वितरण।"
     },
     {
       title: "Sundarkand Path", titleHi: "सुंदरकांड पाठ",
       tithi: "साप्ताहिक", badge: "साप्ताहिक",
       recurring: "प्रत्येक मंगलवार व शनिवार",       // [REPLACE] confirm day/time
-      location: "[REPLACE] समय: सायं 05:00 बजे",
+      location: "समय: सायं 05:00 बजे",
       image: "assets/images/event-3.jpg",
-      description: "[REPLACE] भक्तों द्वारा संगीतमय सुंदरकांड पाठ एवं आरती। सभी श्रद्धालु आमंत्रित हैं।"
+      description: "भक्तों द्वारा संगीतमय सुंदरकांड पाठ एवं आरती। सभी श्रद्धालु आमंत्रित हैं।"
     }
   ],
 
   /* ---------- Gallery ----------
      category must be one of: shringar, aarti, parisar, utsav */
   gallery: [
-    { src: "assets/images/gallery-1.jpg", category: "shringar", tag: "श्रृंगार", caption: "[REPLACE] मंगलवार श्रृंगार दर्शन" },
-    { src: "assets/images/gallery-2.jpg", category: "parisar", tag: "परिसर", caption: "[REPLACE] मंदिर प्रवेश द्वार" },
-    { src: "assets/images/gallery-3.jpg", category: "aarti", tag: "आरती", caption: "[REPLACE] संध्या महाआरती" },
-    { src: "assets/images/gallery-4.jpg", category: "utsav", tag: "उत्सव", caption: "[REPLACE] हनुमान जयंती" },
-    { src: "assets/images/gallery-5.jpg", category: "shringar", tag: "श्रृंगार", caption: "[REPLACE] सिंदूर चोला श्रृंगार" },
-    { src: "assets/images/gallery-6.jpg", category: "parisar", tag: "परिसर", caption: "[REPLACE] गर्भगृह" },
-    { src: "assets/images/gallery-7.jpg", category: "utsav", tag: "उत्सव", caption: "[REPLACE] दीपोत्सव" },
-    { src: "assets/images/gallery-8.jpg", category: "aarti", tag: "आरती", caption: "[REPLACE] अखंड दीप" },
-    { src: "assets/images/gallery-9.jpg", category: "utsav", tag: "उत्सव", caption: "[REPLACE] भंडारा" }
+    { src: "assets/images/gallery-1.jpg", category: "shringar", tag: "श्रृंगार", caption: "मंगलवार श्रृंगार दर्शन" },
+    { src: "assets/images/gallery-2.jpg", category: "parisar", tag: "परिसर", caption: "मंदिर प्रवेश द्वार" },
+    { src: "assets/images/gallery-3.jpg", category: "aarti", tag: "आरती", caption: "संध्या महाआरती" },
+    { src: "assets/images/gallery-4.jpg", category: "utsav", tag: "उत्सव", caption: "हनुमान जयंती" },
+    { src: "assets/images/gallery-5.jpg", category: "shringar", tag: "श्रृंगार", caption: "सिंदूर चोला श्रृंगार" },
+    { src: "assets/images/gallery-6.jpg", category: "parisar", tag: "परिसर", caption: "गर्भगृह" },
+    { src: "assets/images/gallery-7.jpg", category: "utsav", tag: "उत्सव", caption: "दीपोत्सव" },
+    { src: "assets/images/gallery-8.jpg", category: "aarti", tag: "आरती", caption: "अखंड दीप" },
+    { src: "assets/images/gallery-9.jpg", category: "utsav", tag: "उत्सव", caption: "भंडारा" }
   ],
 
   /* ---------- Donations ---------- */
   donation: {
-    upiId: "[REPLACE]-upi-id@bank",
+    upiId: "upi-id@bank",
     qrImage: "assets/images/donation-qr.png",
     amounts: [101, 251, 501, 1100, 2100, 5100],
     defaultAmount: 501,
@@ -133,8 +133,8 @@ window.SITE_DATA = {
     name: "संकट मोचन सेवा संस्थान",
     nameEn: "Sankat Mochan Seva Sansthan",
     // [REPLACE] describe the Sansthan
-    description: "[REPLACE] मंदिर का प्रबंधन एवं सेवा कार्य संकट मोचन सेवा संस्थान द्वारा संचालित किए जाते हैं। संस्थान के कार्यों का संक्षिप्त विवरण यहाँ लिखें।",
-    activities: ["[REPLACE] अन्नक्षेत्र", "[REPLACE] उत्सव आयोजन", "[REPLACE] श्रद्धालु सेवा"],
+    description: "मंदिर का प्रबंधन एवं सेवा कार्य संकट मोचन सेवा संस्थान द्वारा संचालित किए जाते हैं। संस्थान के कार्यों का संक्षिप्त विवरण यहाँ लिखें।",
+    activities: ["अन्नक्षेत्र", "उत्सव आयोजन", "श्रद्धालु सेवा"],
     url: "https://sankatmochansevasansthan.org",          // [REPLACE]
     registrationNo: ""                         // e.g. "Reg. No. ..." — leave "" to hide
   },

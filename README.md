@@ -21,6 +21,19 @@ Open `index.html` in a browser to preview it locally. It works without a server.
 
 Search the project for **`[REPLACE]`**. In VS Code, press Ctrl+Shift+F. Every placeholder text is marked with it.
 
+> **Placeholders that no longer carry the `[REPLACE]` marker.** The markers were stripped from the strings below, so searching will not find them, but they are still sample text and read as instructions to the author rather than information for visitors. Each one needs the temple's real wording before launch.
+>
+> In `assets/js/data.js`:
+> - `donation.upiId` — currently `upi-id@bank`. **This shows on the donation card with a working copy button.** Until the temple's real UPI ID is in, a devotee can copy it and attempt a payment.
+> - `trust.description` — ends with "संस्थान के कार्यों का संक्षिप्त विवरण यहाँ लिखें।" ("write a brief description of the Sansthan's work here")
+> - `trust.activities` — the three chips are category names, not the Sansthan's actual activities
+> - `events[].description` and `events[2].location`, all nine `gallery[].caption` — sample wording
+>
+> In `index.html`:
+> - About history, both paragraphs — describe what should be written, rather than the temple's history
+> - Guidelines list — "प्रसाद अर्पण संबंधी नियम।" and "गर्भगृह में फोटो/वीडियो संबंधी नियम।" name the rule instead of stating it
+> - How to reach, all three — e.g. "Mirzapur Railway Station (MZP). distance and auto/e-rickshaw time to the temple."
+
 1. **WhatsApp number**: at the top of `assets/js/main.js`:
    ```js
    const WHATSAPP_NUMBER = "919876543210"; // 91 + 10-digit number, digits only
