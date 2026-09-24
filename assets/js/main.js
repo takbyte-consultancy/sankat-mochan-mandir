@@ -294,7 +294,7 @@ const WHATSAPP_NUMBER = "91XXXXXXXXXX"; // [REPLACE] e.g. "919876543210"
     set("[data-trust-name]", t.name); set("[data-trust-name-en]", t.nameEn); set("[data-trust-desc]", t.description);
     const chips = $('[data-render="trust-activities"]');
     if (chips) (t.activities || []).forEach((a) => chips.append(el("li", {}, [icon("i-check"), a])));
-    const link = $("[data-trust-link]"); if (link && t.url) link.href = t.url;
+    if (t.url) $$("[data-trust-link]").forEach((a) => { a.href = t.url; });
     const reg = $("[data-trust-reg]"); if (reg && t.registrationNo) { reg.textContent = t.registrationNo; reg.hidden = false; }
 
     const c = DATA.contact || {};

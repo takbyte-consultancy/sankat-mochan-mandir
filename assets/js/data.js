@@ -28,21 +28,21 @@ window.SITE_DATA = {
      [REPLACE] ALL TIMES BELOW ARE SAMPLES — confirm with the temple. */
   schedule: [
     { ritual: "कपाट उद्घाटन व मंगला आरती", ritualEn: "Doors open · Mangla Aarti", start: "05:00", end: "05:30", note: "निर्मल दर्शन" },
-    { ritual: "प्रातः दर्शन व हनुमान चालीसा", ritualEn: "Morning darshan",           start: "05:30", end: "12:00", note: "सामान्य दर्शन" },
-    { ritual: "भोग आरती व विश्राम",          ritualEn: "Bhog Aarti · Rest",          start: "12:00", end: "16:00", note: "कपाट बंद", closed: true },
-    { ritual: "सायं दर्शन",                  ritualEn: "Evening darshan",           start: "16:00", end: "19:30", note: "श्रृंगार दर्शन" },
-    { ritual: "संध्या महाआरती",               ritualEn: "Sandhya Maha Aarti",        start: "19:30", end: "20:15", note: "शंख-घंट नाद सहित", highlight: true },
-    { ritual: "दर्शन",                        ritualEn: "Darshan",                   start: "20:15", end: "21:30", note: "" },
-    { ritual: "शयन आरती व कपाट बंद",          ritualEn: "Shayan Aarti · Doors close", start: "21:30", end: "22:00", note: "रात्रि विश्राम" }
+    { ritual: "प्रातः दर्शन व हनुमान चालीसा", ritualEn: "Morning darshan", start: "05:30", end: "12:00", note: "सामान्य दर्शन" },
+    { ritual: "भोग आरती व विश्राम", ritualEn: "Bhog Aarti · Rest", start: "12:00", end: "16:00", note: "कपाट बंद", closed: true },
+    { ritual: "सायं दर्शन", ritualEn: "Evening darshan", start: "16:00", end: "19:30", note: "श्रृंगार दर्शन" },
+    { ritual: "संध्या महाआरती", ritualEn: "Sandhya Maha Aarti", start: "19:30", end: "20:15", note: "शंख-घंट नाद सहित", highlight: true },
+    { ritual: "दर्शन", ritualEn: "Darshan", start: "20:15", end: "21:30", note: "" },
+    { ritual: "शयन आरती व कपाट बंद", ritualEn: "Shayan Aarti · Doors close", start: "21:30", end: "22:00", note: "रात्रि विश्राम" }
   ],
   scheduleNote: "मंगलवार, शनिवार एवं विशेष पर्वों पर समय में परिवर्तन हो सकता है। विशेष दर्शन से पहले व्हाट्सएप पर पुष्टि करें।",
 
   /* Aarti tiles in the hero ("time" is 24-hour HH:MM). [REPLACE] sample times */
   aartis: [
-    { label: "मंगला आरती",   labelEn: "Mangla",  time: "05:30" },
-    { label: "भोग आरती",     labelEn: "Bhog",    time: "12:00" },
+    { label: "मंगला आरती", labelEn: "Mangla", time: "05:30" },
+    { label: "भोग आरती", labelEn: "Bhog", time: "12:00" },
     { label: "संध्या महाआरती", labelEn: "Sandhya", time: "19:30" },
-    { label: "शयन आरती",    labelEn: "Shayan",  time: "21:30" }
+    { label: "शयन आरती", labelEn: "Shayan", time: "21:30" }
   ],
 
   /* ---------- Temple family ---------- */
@@ -59,9 +59,9 @@ window.SITE_DATA = {
   // role: shown as a small tag. Change "सेवक" to each person's actual seva if you wish.
   sevaks: [
     { name: "Pt. Vibhav Kumar Upadhyay", nameHi: "पं. विभव कुमार उपाध्याय", role: "सेवक", photo: "assets/images/sevak-1.jpg" },
-    { name: "Pt. Ankit Tiwari",          nameHi: "पं. अंकित तिवारी",         role: "सेवक", photo: "assets/images/sevak-2.jpg" },
-    { name: "Pt. Arpit Tiwari",          nameHi: "पं. अर्पित तिवारी",         role: "सेवक", photo: "assets/images/sevak-3.jpg" },
-    { name: "Pt. Anubhav Upadhyay",      nameHi: "पं. अनुभव उपाध्याय",       role: "सेवक", photo: "assets/images/sevak-4.jpg" }
+    { name: "Pt. Ankit Tiwari", nameHi: "पं. अंकित तिवारी", role: "सेवक", photo: "assets/images/sevak-2.jpg" },
+    { name: "Pt. Arpit Tiwari", nameHi: "पं. अर्पित तिवारी", role: "सेवक", photo: "assets/images/sevak-3.jpg" },
+    { name: "Pt. Anubhav Upadhyay", nameHi: "पं. अनुभव उपाध्याय", role: "सेवक", photo: "assets/images/sevak-4.jpg" }
   ],
 
   /* ---------- Events ----------
@@ -101,14 +101,14 @@ window.SITE_DATA = {
      category must be one of: shringar, aarti, parisar, utsav */
   gallery: [
     { src: "assets/images/gallery-1.jpg", category: "shringar", tag: "श्रृंगार", caption: "[REPLACE] मंगलवार श्रृंगार दर्शन" },
-    { src: "assets/images/gallery-2.jpg", category: "parisar",  tag: "परिसर",   caption: "[REPLACE] मंदिर प्रवेश द्वार" },
-    { src: "assets/images/gallery-3.jpg", category: "aarti",    tag: "आरती",    caption: "[REPLACE] संध्या महाआरती" },
-    { src: "assets/images/gallery-4.jpg", category: "utsav",    tag: "उत्सव",   caption: "[REPLACE] हनुमान जयंती" },
+    { src: "assets/images/gallery-2.jpg", category: "parisar", tag: "परिसर", caption: "[REPLACE] मंदिर प्रवेश द्वार" },
+    { src: "assets/images/gallery-3.jpg", category: "aarti", tag: "आरती", caption: "[REPLACE] संध्या महाआरती" },
+    { src: "assets/images/gallery-4.jpg", category: "utsav", tag: "उत्सव", caption: "[REPLACE] हनुमान जयंती" },
     { src: "assets/images/gallery-5.jpg", category: "shringar", tag: "श्रृंगार", caption: "[REPLACE] सिंदूर चोला श्रृंगार" },
-    { src: "assets/images/gallery-6.jpg", category: "parisar",  tag: "परिसर",   caption: "[REPLACE] गर्भगृह" },
-    { src: "assets/images/gallery-7.jpg", category: "utsav",    tag: "उत्सव",   caption: "[REPLACE] दीपोत्सव" },
-    { src: "assets/images/gallery-8.jpg", category: "aarti",    tag: "आरती",    caption: "[REPLACE] अखंड दीप" },
-    { src: "assets/images/gallery-9.jpg", category: "utsav",    tag: "उत्सव",   caption: "[REPLACE] भंडारा" }
+    { src: "assets/images/gallery-6.jpg", category: "parisar", tag: "परिसर", caption: "[REPLACE] गर्भगृह" },
+    { src: "assets/images/gallery-7.jpg", category: "utsav", tag: "उत्सव", caption: "[REPLACE] दीपोत्सव" },
+    { src: "assets/images/gallery-8.jpg", category: "aarti", tag: "आरती", caption: "[REPLACE] अखंड दीप" },
+    { src: "assets/images/gallery-9.jpg", category: "utsav", tag: "उत्सव", caption: "[REPLACE] भंडारा" }
   ],
 
   /* ---------- Donations ---------- */
@@ -135,20 +135,20 @@ window.SITE_DATA = {
     // [REPLACE] describe the Sansthan
     description: "[REPLACE] मंदिर का प्रबंधन एवं सेवा कार्य संकट मोचन सेवा संस्थान द्वारा संचालित किए जाते हैं। संस्थान के कार्यों का संक्षिप्त विवरण यहाँ लिखें।",
     activities: ["[REPLACE] अन्नक्षेत्र", "[REPLACE] उत्सव आयोजन", "[REPLACE] श्रद्धालु सेवा"],
-    url: "https://SANSTHAN-URL-HERE",          // [REPLACE]
+    url: "https://sankatmochansevasansthan.org",          // [REPLACE]
     registrationNo: ""                         // e.g. "Reg. No. ..." — leave "" to hide
   },
 
   /* ---------- Contact ---------- */
   contact: {
-    addressLines: ["[REPLACE] श्री संकट मोचन हनुमान मंदिर", "[REPLACE] मार्ग / मोहल्ला", "मिर्ज़ापुर, उत्तर प्रदेश – [PIN]"],
+    addressLines: ["श्री संकट मोचन मंदिर", "वासलीगंज मार्ग", "मिर्ज़ापुर, उत्तर प्रदेश - 231001"],
     phones: [
-      { label: "मंदिर कार्यालय", number: "[REPLACE] +91 XXXXX XXXXX" }
+      { label: "मंदिर कार्यालय", number: "+91 8874722227" }
     ],
     officeHours: "[REPLACE] प्रतिदिन प्रातः 06:00 से रात्रि 09:00",
-    emails: ["[REPLACE]-email@example.com"],
+    emails: ["sankatmochansevamzp@gmail.com"],
     // Google Maps → Share → Embed a map → copy only the src="..." URL
-    mapEmbed: "https://www.google.com/maps?q=Mirzapur,+Uttar+Pradesh&output=embed", // [REPLACE]
-    mapLink: "https://maps.google.com/?q=Mirzapur,+Uttar+Pradesh"                    // [REPLACE]
+    mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.559496346346!2d82.57221517538028!3d25.150579377740968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398fc1cdd0accadb%3A0x261496e7036d6200!2sSankat%20Mochan%20Mandir%2C%20Mirjapur!5e0!3m2!1sen!2sin!4v1790249160039!5m2!1sen!2sin", // [REPLACE]
+    mapLink: "https://maps.app.goo.gl/gtMu5TyE5UXc6YkM8"                    // [REPLACE]
   }
 };
