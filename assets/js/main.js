@@ -3,7 +3,7 @@
    ===================================================================== */
 
 // ▼▼▼ The temple's WhatsApp number: country code + number, digits only ▼▼▼
-const WHATSAPP_NUMBER = "91XXXXXXXXXX"; // [REPLACE] e.g. "919876543210"
+const WHATSAPP_NUMBER = "918874722227";
 // ▲▲▲ -------------------------------------------------------------- ▲▲▲
 
 (function () {
@@ -67,8 +67,20 @@ const WHATSAPP_NUMBER = "91XXXXXXXXXX"; // [REPLACE] e.g. "919876543210"
   const WA_HEAD = "॥ जय श्री राम ॥";
 
   /* ---------- live darshan status + schedule ---------- */
+  function dowIST() {
+    const [y, m, d] = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Kolkata", year: "numeric", month: "2-digit", day: "2-digit" })
+      .format(new Date()).split("-").map(Number);
+    return new Date(Date.UTC(y, m - 1, d)).getUTCDay();
+  }
+  const aartiTime = (a) => (a.byDay && a.byDay[dowIST()]) || a.time;
+  const todaySchedule = () => (DATA.schedule || []).filter((s) => !s.days || s.days.includes(dowIST()));
+  // a slot whose end is at or before its start runs past midnight
+  function inSlot(s, now) {
+    const a = toMin(s.start), b = toMin(s.end);
+    return b > a ? (now >= a && now < b) : (now >= a || now < b);
+  }
   function currentSlot(now) {
-    return (DATA.schedule || []).find((s) => now >= toMin(s.start) && now < toMin(s.end));
+    return todaySchedule().find((s) => inSlot(s, now));
   }
   function renderStatus() {
     const box = $("[data-status]");
@@ -83,12 +95,14 @@ const WHATSAPP_NUMBER = "91XXXXXXXXXX"; // [REPLACE] e.g. "919876543210"
       text.textContent = "मंदिर खुला है · Darshan open till " + fmtTime(nextCloseTime(now));
     } else {
       box.classList.add("is-closed");
-      const next = schedule.find((s) => !s.closed && toMin(s.start) > now) || schedule.find((s) => !s.closed);
+      const today = todaySchedule();
+      const next = today.find((s) => !s.closed && toMin(s.start) > now) || today.find((s) => !s.closed);
       text.textContent = "कपाट बंद · Opens " + (next ? fmtTime(next.start) : "");
     }
     // mark the current row in the schedule table
+    const slotIdx = slot ? (DATA.schedule || []).indexOf(slot) : -1;
     $$(".schedule tbody tr").forEach((tr) => {
-      const on = slot && tr.dataset.start === slot.start;
+      const on = slotIdx > -1 && Number(tr.dataset.idx) === slotIdx;
       tr.classList.toggle("is-now", !!on);
       const badge = $(".now-badge", tr);
       if (on && !badge) $("th", tr).append(el("span", { class: "now-badge", text: "अभी · Now" }));
@@ -97,14 +111,14 @@ const WHATSAPP_NUMBER = "91XXXXXXXXXX"; // [REPLACE] e.g. "919876543210"
     // highlight the next aarti tile
     const aartis = $$(".aarti");
     aartis.forEach((a) => { a.classList.remove("is-next"); $(".aarti__next", a)?.remove(); });
-    const nextIdx = (DATA.aartis || []).findIndex((a) => toMin(a.time) >= now);
+    const nextIdx = (DATA.aartis || []).findIndex((a) => toMin(aartiTime(a)) >= now);
     const target = aartis[nextIdx === -1 ? 0 : nextIdx];
     if (target) { target.classList.add("is-next"); target.append(el("span", { class: "aarti__next", text: "अगली आरती" })); }
   }
   // last minute of the continuous open stretch that includes "now"
   function nextCloseTime(now) {
-    const s = (DATA.schedule || []).slice().sort((a, b) => toMin(a.start) - toMin(b.start));
-    let i = s.findIndex((x) => now >= toMin(x.start) && now < toMin(x.end));
+    const s = todaySchedule().slice().sort((a, b) => toMin(a.start) - toMin(b.start));
+    let i = s.findIndex((x) => inSlot(x, now));
     let end = s[i].end;
     while (s[i + 1] && !s[i + 1].closed && s[i + 1].start === end) { i++; end = s[i].end; }
     return end;
@@ -112,8 +126,8 @@ const WHATSAPP_NUMBER = "91XXXXXXXXXX"; // [REPLACE] e.g. "919876543210"
 
   function renderSchedule() {
     const body = $('[data-render="schedule"]');
-    if (body) (DATA.schedule || []).forEach((s) => body.append(
-      el("tr", { class: [s.highlight && "is-highlight", s.closed && "is-closed"].filter(Boolean).join(" "), "data-start": s.start }, [
+    if (body) (DATA.schedule || []).forEach((s, i) => body.append(
+      el("tr", { class: [s.highlight && "is-highlight", s.closed && "is-closed"].filter(Boolean).join(" "), "data-idx": String(i) }, [
         el("th", { scope: "row" }, [el("span", { lang: "hi", text: s.ritual }), s.ritualEn ? el("small", { text: s.ritualEn }) : null]),
         el("td", { text: fmtTime(s.start) + " – " + fmtTime(s.end) }),
         el("td", {}, s.note ? el("span", { text: s.note }) : "")
@@ -126,10 +140,10 @@ const WHATSAPP_NUMBER = "91XXXXXXXXXX"; // [REPLACE] e.g. "919876543210"
     const strip = $('[data-render="aartis"]');
     if (strip) aartis.forEach((a) => strip.append(el("li", { class: "aarti" }, [
       el("span", { class: "aarti__name", lang: "hi", text: a.label }),
-      el("span", { class: "aarti__time", text: fmtTime(a.time) })
+      el("span", { class: "aarti__time", text: fmtTime(aartiTime(a)) })
     ])));
     const foot = $('[data-render="aartis-footer"]');
-    if (foot) aartis.forEach((a) => foot.append(el("li", {}, [el("span", { lang: "hi", text: a.label }), el("strong", { text: fmtTime(a.time) })])));
+    if (foot) aartis.forEach((a) => foot.append(el("li", {}, [el("span", { lang: "hi", text: a.label }), el("strong", { text: fmtTime(aartiTime(a)) })])));
   }
 
   /* ---------- hero announcement ---------- */
@@ -144,12 +158,10 @@ const WHATSAPP_NUMBER = "91XXXXXXXXXX"; // [REPLACE] e.g. "919876543210"
   }
 
   /* ---------- temple family ---------- */
-  const arch = (src, alt) => el("div", { class: "arch" }, el("img", { src, alt, width: "600", height: "800", loading: "lazy", decoding: "async" }));
   function renderFamily() {
     const m = DATA.mahant;
     const card = $('[data-render="mahant"]');
     if (card && m) card.append(
-      arch(m.photo, (m.titleHi || "") + " " + (m.nameHi || m.name)),
       el("div", {}, [
         el("p", { class: "tag tag--gold mahant__badge", lang: "hi", text: (m.titleHi || "") + " · " + (m.title || "") }),
         el("h3", { class: "mahant__name", lang: "hi", text: (m.titleHi ? m.titleHi + " " : "") + (m.nameHi || m.name) }),
@@ -159,7 +171,6 @@ const WHATSAPP_NUMBER = "91XXXXXXXXXX"; // [REPLACE] e.g. "919876543210"
     );
     const list = $('[data-render="sevaks"]');
     if (list) (DATA.sevaks || []).forEach((s) => list.append(el("li", { class: "sevak reveal" }, [
-      arch(s.photo, "सेवक " + (s.nameHi || s.name)),
       el("p", { class: "sevak__hi", lang: "hi", text: s.nameHi || s.name }),
       el("p", { class: "sevak__en", text: s.name }),
       s.role ? el("span", { class: "tag tag--saffron", lang: "hi", text: s.role }) : null

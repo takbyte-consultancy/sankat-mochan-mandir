@@ -25,24 +25,32 @@ window.SITE_DATA = {
        • the schedule table in Visitor Info
      closed: true  → the temple is closed during this slot
      highlight: true → shown in saffron (e.g. the main aarti)
+     days: [0..6]  → only this weekday (0 = Sunday, 2 = Tuesday, 6 = Saturday).
+                     Leave it out and the row applies every day. Every row still
+                     shows in the table; days only decides which one counts as
+                     "now" for the open/closed badge.
      [REPLACE] ALL TIMES BELOW ARE SAMPLES — confirm with the temple. */
   schedule: [
-    { ritual: "कपाट उद्घाटन व मंगला आरती", ritualEn: "Doors open · Mangla Aarti", start: "05:00", end: "05:30", note: "निर्मल दर्शन" },
-    { ritual: "प्रातः दर्शन व हनुमान चालीसा", ritualEn: "Morning darshan", start: "05:30", end: "12:00", note: "सामान्य दर्शन" },
-    { ritual: "भोग आरती व विश्राम", ritualEn: "Bhog Aarti · Rest", start: "12:00", end: "16:00", note: "कपाट बंद", closed: true },
-    { ritual: "सायं दर्शन", ritualEn: "Evening darshan", start: "16:00", end: "19:30", note: "श्रृंगार दर्शन" },
-    { ritual: "संध्या महाआरती", ritualEn: "Sandhya Maha Aarti", start: "19:30", end: "20:15", note: "शंख-घंट नाद सहित", highlight: true },
-    { ritual: "दर्शन", ritualEn: "Darshan", start: "20:15", end: "21:30", note: "" },
-    { ritual: "शयन आरती व कपाट बंद", ritualEn: "Shayan Aarti · Doors close", start: "21:30", end: "22:00", note: "रात्रि विश्राम" }
+    { ritual: "कपाट उद्घाटन व मंगला आरती", ritualEn: "Doors open · Mangla Aarti", start: "05:30", end: "06:00", note: "निर्मल दर्शन" },
+    { ritual: "प्रातः दर्शन व हनुमान चालीसा", ritualEn: "Morning darshan", start: "06:00", end: "12:00", note: "सामान्य दर्शन" },
+    { ritual: "विश्राम", ritualEn: "Bhog Aarti · Rest", start: "12:00", end: "16:00", note: "कपाट बंद", closed: true },
+    { ritual: "सायं दर्शन (अन्य दिन)", ritualEn: "Evening darshan", start: "16:00", end: "21:30", note: "दर्शन", days: [0, 1, 3, 4, 5] },
+    { ritual: "सायं दर्शन (मंगलवार)", ritualEn: "Evening darshan · Tuesday", start: "16:00", end: "23:00", note: "दर्शन", days: [2] },
+    { ritual: "सायं दर्शन (शनिवार)", ritualEn: "Evening darshan · Saturday", start: "16:00", end: "23:30", note: "दर्शन", days: [6] },
+    { ritual: "सायं श्रृंगार", ritualEn: "Evening Shringar", start: "18:30", end: "19:00", note: "शृंगार दर्शन" },
+    { ritual: "शयन आरती व कपाट बंद (अन्य दिन)", ritualEn: "Shayan Aarti · Doors close", start: "21:30", end: "22:00", note: "रात्रि विश्राम", days: [0, 1, 3, 4, 5] },
+    { ritual: "शयन आरती व कपाट बंद (मंगलवार)", ritualEn: "Shayan Aarti · Tuesday", start: "23:00", end: "23:30", note: "रात्रि विश्राम", days: [2] },
+    { ritual: "शयन आरती व कपाट बंद (शनिवार)", ritualEn: "Shayan Aarti · Saturday", start: "23:30", end: "00:00", note: "रात्रि विश्राम", days: [6] }
   ],
-  scheduleNote: "मंगलवार, शनिवार एवं विशेष पर्वों पर समय में परिवर्तन हो सकता है। विशेष दर्शन से पहले व्हाट्सएप पर पुष्टि करें।",
+  scheduleNote: "विशेष पर्वों पर समय में परिवर्तन हो सकता है। विशेष दर्शन से पहले व्हाट्सएप पर पुष्टि करें।",
 
-  /* Aarti tiles in the hero ("time" is 24-hour HH:MM). [REPLACE] sample times */
+  /* Aarti tiles in the hero ("time" is 24-hour HH:MM). [REPLACE] sample times
+     byDay: { 2: "23:00" } → a different time on that weekday (0 = Sunday). */
   aartis: [
     { label: "मंगला आरती", labelEn: "Mangla", time: "05:30" },
-    { label: "भोग आरती", labelEn: "Bhog", time: "12:00" },
-    { label: "संध्या महाआरती", labelEn: "Sandhya", time: "19:30" },
-    { label: "शयन आरती", labelEn: "Shayan", time: "21:30" }
+    // { label: "भोग आरती", labelEn: "Bhog", time: "12:00" },
+    // { label: "संध्या महाआरती", labelEn: "Sandhya", time: "19:30" },
+    { label: "शयन आरती", labelEn: "Shayan", time: "21:30", byDay: { 2: "23:00", 6: "23:30" } }
   ],
 
   /* ---------- Temple family ---------- */
@@ -88,6 +96,41 @@ window.SITE_DATA = {
       description: "प्रभु श्री राम का प्राकट्योत्सव, रामचरितमानस पाठ एवं प्रसाद वितरण।"
     },
     {
+      title: "Vijayadashami (Dussehra)", titleHi: "विजयादशमी (दशहरा)",
+      tithi: "आश्विन शुक्ल दशमी", badge: "वार्षिक",
+      recurring: "आश्विन शुक्ल दशमी",
+      location: "मुख्य मंदिर"
+      // [REPLACE] add the description once the temple confirms the day's programme
+    },
+    {
+      title: "Shri Hanuman Janmotsav (Choti Diwali)", titleHi: "श्री हनुमान जन्मोत्सव (छोटी दीपावली)",
+      tithi: "कार्तिक कृष्ण चतुर्दशी", badge: "वार्षिक",
+      recurring: "नरक चतुर्दशी — दीपावली से एक दिन पूर्व",
+      location: "मुख्य मंदिर",
+      description: "हनुमानगढ़ी परंपरा अनुसार जन्मोत्सव का शुभारंभ। नरक चतुर्दशी की प्रातः अखंड श्री रामचरितमानस पाठ प्रारंभ होता है।"
+    },
+    {
+      title: "Diwali · Janmotsav at Brahma Muhurat", titleHi: "दीपावली — ब्रह्म मुहूर्त जन्मोत्सव",
+      tithi: "कार्तिक अमावस्या", badge: "वार्षिक",
+      recurring: "कार्तिक अमावस्या (दीपावली)",
+      location: "मुख्य मंदिर",
+      description: "दीपावली की प्रातः ब्रह्म मुहूर्त में जन्मोत्सव। इस दिन कपाट पूरे दिन खुले रहते हैं, अखंड श्री रामचरितमानस पाठ का समापन एवं प्रसाद वितरण होता है।"
+    },
+    {
+      title: "Annakut Shringar & Govardhan Puja", titleHi: "अन्नकूट श्रृंगार एवं गोवर्धन पूजा",
+      tithi: "कार्तिक शुक्ल प्रतिपदा", badge: "वार्षिक",
+      recurring: "दीपावली के अगले दिन",
+      location: "मुख्य मंदिर",
+      description: "अन्नकूट का श्रृंगार, छप्पन भोग अर्पण एवं गोवर्धन पूजा।"
+    },
+    {
+      title: "Maha Shivratri", titleHi: "महाशिवरात्रि",
+      tithi: "फाल्गुन कृष्ण चतुर्दशी", badge: "वार्षिक",
+      recurring: "फाल्गुन कृष्ण चतुर्दशी",
+      location: "मुख्य मंदिर"
+      // [REPLACE] add the description once the temple confirms the day's programme
+    },
+    {
       title: "Sundarkand Path", titleHi: "सुंदरकांड पाठ",
       tithi: "साप्ताहिक", badge: "साप्ताहिक",
       recurring: "प्रत्येक मंगलवार व शनिवार",       // [REPLACE] confirm day/time
@@ -118,13 +161,19 @@ window.SITE_DATA = {
     amounts: [101, 251, 501, 1100, 2100, 5100],
     defaultAmount: 501,
     purposes: [
-      "सामान्य सेवा (General Seva)",
-      "दैनिक भोग व प्रसाद (Bhog/Prasad)",
-      "अखंड दीप सेवा (Akhand Deep)",
-      "मंगलवार चोला सेवा (Chola Seva)",
-      "भंडारा व अन्नदान (Bhandara)",
-      "उत्सव सेवा (Festival)",
-      "मंदिर विकास (Temple Development)"
+      "दिव्य दर्शन (Live Darshan)",
+      "रुद्राभिषेक पूजा ऑनलाइन बुकिंग (Rudrabhishek Puja Booking)",
+      "दर्शन बुकिंग (Darshan Booking)",
+      "दिव्य-अर्पण एवं कर्मकाण्ड (Spiritual Offerings)",
+      "भगवान् का भोग (Bhagvan Ka Bhog)",
+      "दरिद्रनारायण भोज (Daridranarayan Bhoj)",
+      "सिन्दूर श्रृंगार (Sindoor Shringar)",
+      "साधुसेवा (Sadhu Seva)",
+      "अखण्ड-ज्योति (Akhand-Jyoti)",
+      "ध्वजारोहण (Dhvajarohan)",
+      "पुष्प श्रृंगार (Pushp Shringar)",
+      "पूजा-पाठ (Pooja-Path)",
+      "नैवेद्यम/अर्पितम (Naivedyam/Arpitam)"
     ]
   },
 
